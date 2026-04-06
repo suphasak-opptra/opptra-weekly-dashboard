@@ -623,6 +623,42 @@
       border: none;
       border-top: 1px dashed var(--opptra-grey-light);
     }
+  
+    /* ── Week Selector ── */
+    .week-selector {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .week-selector label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      font-family: var(--font-body);
+    }
+    .week-selector select {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--opptra-navy);
+      background: var(--opptra-white);
+      border: none;
+      padding: 8px 36px 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23131A48' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      min-width: 240px;
+    }
+    .week-selector select:hover { background-color: var(--opptra-yellow); }
+    .week-selector select:focus { outline: 2px solid var(--opptra-orange); outline-offset: 1px; }
+    .week-view { display: none; }
+    .week-view.active { display: block; }
   </style>
 </head>
 <body>
@@ -633,22 +669,1712 @@
       <img src="https://cdn.prod.website-files.com/67a44396c211269f785f9dfe/67a4a8650573be9ae072ae9e_Opptra-logo.svg" alt="Opptra">
       <h1>Softlines GCC — Weekly Review Dashboard</h1>
     </div>
-    <div class="date-badge">Data as on 2026-03-27</div>
+    <div class="week-selector">
+      <label>Reporting Week</label>
+      <select id="weekPicker" onchange="switchWeek(this.value)">
+        <option value="week2" selected>31 Mar – 06 Apr 2026</option>
+        <option value="week1">24 Mar – 27 Mar 2026</option>
+      </select>
+    </div>
   </div>
 
-  <!-- ═══════════════ PAGE NAV ═══════════════ -->
-  <div class="page-nav">
-    <a href="#page1" class="active">MTD Revenue vs Target</a>
-    <a href="#page2">Month-on-Month Trend</a>
-    <a href="#page3">Channel Performance</a>
-    <a href="#page4">WoW Performance</a>
-    <a href="#page5">Performance Marketing</a>
-    <a href="#page6">Inventory</a>
-    <a href="#page7">Launch Calendar</a>
+  <!-- ═══════ WEEK 2: 31 Mar – 06 Apr 2026 (LATEST) ═══════ -->
+  <div class="week-view active" id="view-week2">
+<div class="page-nav">
+    <a href="#w2-page1" class="active">Mar Revenue vs Target</a>
+    <a href="#w2-page1b">Apr Targets</a>
+    <a href="#w2-page2">Month-on-Month Trend</a>
+    <a href="#w2-page3">Channel Performance</a>
+    <a href="#w2-page4">WoW Performance</a>
+    <a href="#w2-page5">Performance Marketing</a>
+    <a href="#w2-page6">Inventory</a>
+    <a href="#w2-page7">Launch Calendar</a>
   </div>
 
-  <!-- ═══════════════ PAGE 1: MTD REVENUE PERFORMANCE ═══════════════ -->
-  <div class="page-section" id="page1">
+<!-- ═══════════════ PAGE 1: MARCH REVENUE PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w2-page1">
+    <div class="section-title"><span class="page-num">1</span> March Revenue Performance — Target vs Actual</div>
+
+    <div class="summary-row">
+      <div class="summary-card">
+        <div class="label">Monthly Target</div>
+        <div class="value">$403,775</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">MTD Revenue</div>
+        <div class="value">$614,440</div>
+      </div>
+      <div class="summary-card accent">
+        <div class="label">Surplus</div>
+        <div class="value">+$210,665</div>
+        <span class="surplus-tag positive">+52.2%</span>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Target ($)</th>
+            <th>Revenue ($)</th>
+            <th>Δ ($)</th>
+            <th>Δ %</th>
+            <th class="col-sep">Units</th>
+            <th>$ ASP</th>
+            <th class="col-sep">% KSA</th>
+            <th>% UAE</th>
+            <th class="col-sep">GM %</th>
+            <th class="col-sep">Mktg %</th>
+            <th class="col-sep">Ret %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td>316,925</td>
+            <td>451,325</td>
+            <td><span class="pill positive">+134,400</span></td>
+            <td><span class="pill positive">+42.4%</span></td>
+            <td class="col-sep">10,013</td>
+            <td>$45.1</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:44px"></span>74.2%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:15px"></span>25.2%</span></td>
+            <td class="col-sep">61.7%</td>
+            <td class="col-sep">6.1%</td>
+            <td class="col-sep">11.5%</td>
+          </tr>
+          <tr>
+            <td>Penti</td>
+            <td>24,379</td>
+            <td>64,738</td>
+            <td><span class="pill positive">+40,359</span></td>
+            <td><span class="pill positive">+165.6%</span></td>
+            <td class="col-sep">3,381</td>
+            <td>$19.1</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:36px"></span>60.6%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:23px"></span>39.0%</span></td>
+            <td class="col-sep">58.5%</td>
+            <td class="col-sep">7.9%</td>
+            <td class="col-sep">6.7%</td>
+          </tr>
+          <tr>
+            <td>Campus</td>
+            <td>27,426</td>
+            <td>45,542</td>
+            <td><span class="pill positive">+18,116</span></td>
+            <td><span class="pill positive">+66.1%</span></td>
+            <td class="col-sep">1,742</td>
+            <td>$26.1</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:50px"></span>82.7%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:10px"></span>16.6%</span></td>
+            <td class="col-sep">59.1%</td>
+            <td class="col-sep">8.1%</td>
+            <td class="col-sep">14.1%</td>
+          </tr>
+          <tr>
+            <td>French Connection</td>
+            <td>18,284</td>
+            <td>36,375</td>
+            <td><span class="pill positive">+18,091</span></td>
+            <td><span class="pill positive">+98.9%</span></td>
+            <td class="col-sep">1,237</td>
+            <td>$29.4</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:25px"></span>42.4%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:34px"></span>56.9%</span></td>
+            <td class="col-sep">33.3%</td>
+            <td class="col-sep empty">—</td>
+            <td class="col-sep">25.6%</td>
+          </tr>
+          <tr>
+            <td>Keds</td>
+            <td>4,572</td>
+            <td>9,046</td>
+            <td><span class="pill positive">+4,474</span></td>
+            <td><span class="pill positive">+97.9%</span></td>
+            <td class="col-sep">171</td>
+            <td>$52.9</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:25px"></span>41.6%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:32px"></span>53.5%</span></td>
+            <td class="col-sep">59.7%</td>
+            <td class="col-sep">23.7%</td>
+            <td class="col-sep">27.5%</td>
+          </tr>
+          <tr>
+            <td>Puma</td>
+            <td>12,189</td>
+            <td>4,360</td>
+            <td><span class="pill negative">−7,829</span></td>
+            <td><span class="pill negative">−64.2%</span></td>
+            <td class="col-sep">180</td>
+            <td>$23.8</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:60px"></span>100%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep">32.2%</td>
+            <td class="col-sep empty">—</td>
+            <td class="col-sep">11.3%</td>
+          </tr>
+          <tr>
+            <td>Vero Moda</td>
+            <td><span style="color:#999">—</span></td>
+            <td>2,599</td>
+            <td><span class="pill neutral">N/A</span></td>
+            <td><span class="pill neutral">N/A</span></td>
+            <td class="col-sep">74</td>
+            <td>$35.1</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:20px"></span>33.8%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:40px"></span>66.2%</span></td>
+            <td class="col-sep">69.2%</td>
+            <td class="col-sep">20.0%</td>
+            <td class="col-sep">23.7%</td>
+          </tr>
+          <tr>
+            <td>Cardio Bunny</td>
+            <td><span style="color:#999">—</span></td>
+            <td>455</td>
+            <td><span class="pill neutral">N/A</span></td>
+            <td><span class="pill neutral">N/A</span></td>
+            <td class="col-sep">13</td>
+            <td>$35.0</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:9px"></span>14.3%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:51px"></span>85.7%</span></td>
+            <td class="col-sep">75.3%</td>
+            <td class="col-sep empty">—</td>
+            <td class="col-sep">0%</td>
+          </tr>
+          <tr class="total-row">
+            <td>Grand Total</td>
+            <td>403,775</td>
+            <td>614,440</td>
+            <td><span class="pill positive" style="font-size:12px">+210,665</span></td>
+            <td><span class="pill positive" style="font-size:12px">+52.2%</span></td>
+            <td class="col-sep">16,811</td>
+            <td>$36.5</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:43px"></span>71.4%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:17px"></span>28.0%</span></td>
+            <td class="col-sep">59.3%</td>
+            <td class="col-sep">6.4%</td>
+            <td class="col-sep">12.4%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footnote">
+      Source: Revenue from CWN Report (Mar 31) &bull; Units, ASP, Country Split, GM % &amp; Ret % from CY26 Sales data (net: delivered in month &minus; returned in month, no status filter) &bull; GM % = (Net Revenue &minus; Net COGS) / Net Revenue &bull; Mktg % = Paid Spend (Marketing CSVs) / CWN Revenue &bull; Ret % = Returned units / Delivered units in month &bull; Vero Moda &amp; Cardio Bunny have no target in the current CWN report &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 1B: APRIL TARGETS ═══════════════ -->
+  <div class="page-section" id="w2-page1b">
+    <div class="section-title"><span class="page-num">1b</span> April 2026 — Revenue Targets by Brand</div>
+
+    <!-- Summary Cards -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;">
+      <div style="background:var(--opptra-white);border-radius:12px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid var(--opptra-navy);">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--opptra-grey);margin-bottom:4px;">GCC Target</div>
+        <div style="font-size:28px;font-weight:800;color:var(--opptra-navy);font-family:var(--font-heading);">$495,000</div>
+        <div style="font-size:11px;color:var(--opptra-grey);margin-top:2px;">8 brands &bull; Excl. Nautica</div>
+      </div>
+      <div style="background:var(--opptra-white);border-radius:12px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid var(--opptra-orange);">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--opptra-grey);margin-bottom:4px;">India Target</div>
+        <div style="font-size:28px;font-weight:800;color:var(--opptra-navy);font-family:var(--font-heading);">$48,000</div>
+        <div style="font-size:11px;color:var(--opptra-grey);margin-top:2px;">Cardio Bunny $12K &bull; Jack &amp; Jones $36K</div>
+      </div>
+      <div style="background:var(--opptra-white);border-radius:12px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #27ae60;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--opptra-grey);margin-bottom:4px;">SEA Target</div>
+        <div style="font-size:28px;font-weight:800;color:var(--opptra-navy);font-family:var(--font-heading);">$5,000</div>
+        <div style="font-size:11px;color:var(--opptra-grey);margin-top:2px;">Campus (newly live)</div>
+      </div>
+    </div>
+
+    <!-- GCC Brand Targets Table -->
+    <div style="margin-bottom:14px;">
+      <h3 style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--opptra-navy);margin-bottom:12px;">GCC Brand Targets</h3>
+    </div>
+    <div class="table-card">
+      <table class="perf-table" style="width:100%;border-collapse:collapse;font-size:12.5px;">
+        <thead>
+          <tr style="background:var(--opptra-navy);color:var(--opptra-white);">
+            <th style="text-align:left;padding:10px 14px;font-weight:600;">Brand</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">Target</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">KSA</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">UAE</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">GM%</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">Mktg%</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">Mar Actual</th>
+            <th style="text-align:right;padding:10px 14px;font-weight:600;">Apr vs Mar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">U.S. Polo Assn.</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$325,000</td>
+            <td style="text-align:right;padding:10px 14px;">$243,750</td>
+            <td style="text-align:right;padding:10px 14px;">$81,250</td>
+            <td style="text-align:right;padding:10px 14px;">62%</td>
+            <td style="text-align:right;padding:10px 14px;">5%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$451,325</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--red);font-weight:600;">&minus;28.0%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Penti</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$50,000</td>
+            <td style="text-align:right;padding:10px 14px;">$37,500</td>
+            <td style="text-align:right;padding:10px 14px;">$12,500</td>
+            <td style="text-align:right;padding:10px 14px;">58%</td>
+            <td style="text-align:right;padding:10px 14px;">10%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$64,738</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--red);font-weight:600;">&minus;22.8%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Campus</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$45,000</td>
+            <td style="text-align:right;padding:10px 14px;">$33,750</td>
+            <td style="text-align:right;padding:10px 14px;">$11,250</td>
+            <td style="text-align:right;padding:10px 14px;">59%</td>
+            <td style="text-align:right;padding:10px 14px;">12%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$45,542</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--red);font-weight:600;">&minus;1.2%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">French Connection</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$32,000</td>
+            <td style="text-align:right;padding:10px 14px;">$24,000</td>
+            <td style="text-align:right;padding:10px 14px;">$8,000</td>
+            <td style="text-align:right;padding:10px 14px;">52%</td>
+            <td style="text-align:right;padding:10px 14px;">&mdash;</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$36,375</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--red);font-weight:600;">&minus;12.0%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">PUMA</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$18,000</td>
+            <td style="text-align:right;padding:10px 14px;">$18,000</td>
+            <td style="text-align:right;padding:10px 14px;">$0</td>
+            <td style="text-align:right;padding:10px 14px;">40%</td>
+            <td style="text-align:right;padding:10px 14px;">&mdash;</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$4,360</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--green);font-weight:600;">+313%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Keds</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$10,000</td>
+            <td style="text-align:right;padding:10px 14px;">$7,500</td>
+            <td style="text-align:right;padding:10px 14px;">$2,500</td>
+            <td style="text-align:right;padding:10px 14px;">60%</td>
+            <td style="text-align:right;padding:10px 14px;">5%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$9,046</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--green);font-weight:600;">+10.5%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Vero Moda</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$10,000</td>
+            <td style="text-align:right;padding:10px 14px;">$6,000</td>
+            <td style="text-align:right;padding:10px 14px;">$4,000</td>
+            <td style="text-align:right;padding:10px 14px;">68%</td>
+            <td style="text-align:right;padding:10px 14px;">10%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$2,599</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--green);font-weight:600;">+285%</td>
+          </tr>
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Cardio Bunny</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$5,000</td>
+            <td style="text-align:right;padding:10px 14px;">$1,000</td>
+            <td style="text-align:right;padding:10px 14px;">$4,000</td>
+            <td style="text-align:right;padding:10px 14px;">65%</td>
+            <td style="text-align:right;padding:10px 14px;">5%</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--opptra-grey);">$455</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--green);font-weight:600;">+999%</td>
+          </tr>
+          <!-- TOTAL -->
+          <tr style="border-top:2px solid var(--opptra-navy);background:#f9f9fb;">
+            <td style="padding:10px 14px;font-weight:700;color:var(--opptra-navy);">GCC Total</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$495,000</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$371,500</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;">$123,500</td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;"></td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;"></td>
+            <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--opptra-grey);">$614,440</td>
+            <td style="text-align:right;padding:10px 14px;color:var(--red);font-weight:700;">&minus;19.4%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- India & SEA April Targets -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;">
+
+      <!-- India Targets -->
+      <div style="background:var(--opptra-white);border-radius:12px;padding:20px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid var(--opptra-orange);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+          <div>
+            <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--opptra-grey);">India — April Target</div>
+            <div style="font-size:24px;font-weight:800;color:var(--opptra-navy);font-family:var(--font-heading);margin-top:2px;">$48,000</div>
+          </div>
+          <div style="font-size:11px;color:var(--opptra-grey);text-align:right;">2 brands</div>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--opptra-navy);">
+              <th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Brand</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Target</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">GM%</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Mktg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:7px 8px;font-weight:500;">Jack &amp; Jones</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:700;">$36,000</td>
+              <td style="text-align:right;padding:7px 8px;">44%</td>
+              <td style="text-align:right;padding:7px 8px;">5%</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:7px 8px;font-weight:500;">Cardio Bunny</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:700;">$12,000</td>
+              <td style="text-align:right;padding:7px 8px;">68%</td>
+              <td style="text-align:right;padding:7px 8px;">5%</td>
+            </tr>
+            <tr style="border-top:2px solid var(--opptra-navy);">
+              <td style="padding:7px 8px;font-weight:700;color:var(--opptra-navy);">Total</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:700;color:var(--opptra-navy);">$48,000</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:600;color:var(--opptra-navy);">—</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:600;color:var(--opptra-navy);">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SEA Targets -->
+      <div style="background:var(--opptra-white);border-radius:12px;padding:20px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #27ae60;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+          <div>
+            <div style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--opptra-grey);">SEA — April Target</div>
+            <div style="font-size:24px;font-weight:800;color:var(--opptra-navy);font-family:var(--font-heading);margin-top:2px;">$5,000</div>
+          </div>
+          <div style="font-size:11px;color:var(--opptra-grey);text-align:right;">1 brand</div>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--opptra-navy);">
+              <th style="text-align:left;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Brand</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Target</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">GM%</th>
+              <th style="text-align:right;padding:6px 8px;font-weight:600;color:var(--opptra-navy);font-size:11px;background:transparent;text-transform:none;letter-spacing:0;">Mktg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:7px 8px;font-weight:500;">Campus</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:700;">$5,000</td>
+              <td style="text-align:right;padding:7px 8px;">60%</td>
+              <td style="text-align:right;padding:7px 8px;">15%</td>
+            </tr>
+            <tr style="border-top:2px solid var(--opptra-navy);">
+              <td style="padding:7px 8px;font-weight:700;color:var(--opptra-navy);">Total</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:700;color:var(--opptra-navy);">$5,000</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:600;color:var(--opptra-navy);">60%</td>
+              <td style="text-align:right;padding:7px 8px;font-weight:600;color:var(--opptra-navy);">15%</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="font-size:10.5px;color:var(--opptra-grey);margin-top:10px;font-style:italic;">Campus newly live in SEA — first full month target</div>
+      </div>
+
+    </div>
+
+    <div class="footnote" style="margin-top:14px;">
+      Source: April&rsquo;26 LRS Targets (CWN Target column) &bull; Mar Actual = CWN net revenue &bull; Apr vs Mar = (Apr Target &minus; Mar Actual) / Mar Actual &bull; KSA/UAE splits from target file &bull; Nautica target = $0 (excluded)
+    </div>
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 2: MONTH-ON-MONTH PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w2-page2">
+    <div class="section-title"><span class="page-num">2</span> Month-on-Month Performance — Q1 2026</div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr class="group-row">
+            <th rowspan="2" style="vertical-align:bottom;">Brand</th>
+            <th colspan="3">$ Revenue</th>
+            <th colspan="3" style="border-left: 2px solid rgba(255,255,255,0.15);">Units</th>
+            <th colspan="3" style="border-left: 2px solid rgba(255,255,255,0.15);">$ ASP</th>
+            <th colspan="3" style="border-left: 2px solid rgba(255,255,255,0.15);">Gross Margin %</th>
+            <th colspan="3" style="border-left: 2px solid rgba(255,255,255,0.15);">Mktg Spend %</th>
+            <th colspan="3" style="border-left: 2px solid rgba(255,255,255,0.15);">Ret %</th>
+          </tr>
+          <tr class="month-row">
+            <th>Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- U.S. Polo Assn. -->
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td>497,959</td>
+            <td>374,362</td>
+            <td class="mar-col improved">451,147 <span class="arrow up">▲</span></td>
+            <td class="col-sep">10,764</td>
+            <td>8,991</td>
+            <td class="mar-col improved">10,013 <span class="arrow up">▲</span></td>
+            <td class="col-sep">$46.3</td>
+            <td>$41.6</td>
+            <td class="mar-col improved">$45.1 <span class="arrow up">▲</span></td>
+            <td class="col-sep">59.3%</td>
+            <td>58.8%</td>
+            <td class="mar-col improved">61.7% <span class="arrow up">▲</span></td>
+            <td class="col-sep">4.0%</td>
+            <td>3.8%</td>
+            <td class="mar-col declined">6.1% <span class="arrow up">▲</span></td>
+            <td class="col-sep">8.1%</td>
+            <td>11.1%</td>
+            <td class="mar-col declined">11.5% <span class="arrow up">▲</span></td>
+          </tr>
+          <!-- Penti -->
+          <tr>
+            <td>Penti</td>
+            <td>10,629</td>
+            <td>22,821</td>
+            <td class="mar-col improved">64,676 <span class="arrow up">▲</span></td>
+            <td class="col-sep">668</td>
+            <td>1,252</td>
+            <td class="mar-col improved">3,381 <span class="arrow up">▲</span></td>
+            <td class="col-sep">$15.9</td>
+            <td>$18.2</td>
+            <td class="mar-col improved">$19.1 <span class="arrow up">▲</span></td>
+            <td class="col-sep">56.1%</td>
+            <td>58.0%</td>
+            <td class="mar-col improved">58.5% <span class="arrow up">▲</span></td>
+            <td class="col-sep">17.3%</td>
+            <td>8.6%</td>
+            <td class="mar-col improved">7.9% <span class="arrow down">▼</span></td>
+            <td class="col-sep">5.9%</td>
+            <td>5.3%</td>
+            <td class="mar-col declined">6.7% <span class="arrow up">▲</span></td>
+          </tr>
+          <!-- Campus -->
+          <tr>
+            <td>Campus</td>
+            <td>24,199</td>
+            <td>23,540</td>
+            <td class="mar-col improved">45,542 <span class="arrow up">▲</span></td>
+            <td class="col-sep">891</td>
+            <td>864</td>
+            <td class="mar-col improved">1,742 <span class="arrow up">▲</span></td>
+            <td class="col-sep">$27.2</td>
+            <td>$27.2</td>
+            <td class="mar-col declined">$26.1 <span class="arrow down">▼</span></td>
+            <td class="col-sep">60.5%</td>
+            <td>61.3%</td>
+            <td class="mar-col declined">59.1% <span class="arrow down">▼</span></td>
+            <td class="col-sep">25.1%</td>
+            <td>13.9%</td>
+            <td class="mar-col improved">8.1% <span class="arrow down">▼</span></td>
+            <td class="col-sep">16.6%</td>
+            <td>19.9%</td>
+            <td class="mar-col improved">14.1% <span class="arrow down">▼</span></td>
+          </tr>
+          <!-- French Connection -->
+          <tr>
+            <td>French Connection</td>
+            <td>28,016</td>
+            <td>25,882</td>
+            <td class="mar-col improved">36,374 <span class="arrow up">▲</span></td>
+            <td class="col-sep">671</td>
+            <td>826</td>
+            <td class="mar-col improved">1,237 <span class="arrow up">▲</span></td>
+            <td class="col-sep">$41.8</td>
+            <td>$31.3</td>
+            <td class="mar-col declined">$29.4 <span class="arrow down">▼</span></td>
+            <td class="col-sep">23.7%</td>
+            <td>13.4%</td>
+            <td class="mar-col improved">33.3% <span class="arrow up">▲</span></td>
+            <td class="col-sep">4.2%</td>
+            <td>1.4%</td>
+            <td class="mar-col empty">—</td>
+            <td class="col-sep">29.0%</td>
+            <td>28.9%</td>
+            <td class="mar-col improved">25.6% <span class="arrow down">▼</span></td>
+          </tr>
+          <!-- Keds -->
+          <tr>
+            <td>Keds</td>
+            <td class="empty">—</td>
+            <td>1,647</td>
+            <td class="mar-col improved">9,046 <span class="arrow up">▲</span></td>
+            <td class="col-sep empty">—</td>
+            <td>27</td>
+            <td class="mar-col improved">171 <span class="arrow up">▲</span></td>
+            <td class="col-sep empty">—</td>
+            <td>$61.0</td>
+            <td class="mar-col declined">$52.9 <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td>64.6%</td>
+            <td class="mar-col declined">59.7% <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td>56.3%</td>
+            <td class="mar-col improved">23.7% <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td>18.2%</td>
+            <td class="mar-col declined">27.5% <span class="arrow up">▲</span></td>
+          </tr>
+          <!-- Puma -->
+          <tr>
+            <td>Puma</td>
+            <td>2,769</td>
+            <td>12,250</td>
+            <td class="mar-col declined">4,281 <span class="arrow down">▼</span></td>
+            <td class="col-sep">92</td>
+            <td>452</td>
+            <td class="mar-col declined">180 <span class="arrow down">▼</span></td>
+            <td class="col-sep">$30.1</td>
+            <td>$27.1</td>
+            <td class="mar-col declined">$23.8 <span class="arrow down">▼</span></td>
+            <td class="col-sep">51.9%</td>
+            <td>49.1%</td>
+            <td class="mar-col declined">32.2% <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col empty">—</td>
+            <td class="col-sep">4.2%</td>
+            <td>2.0%</td>
+            <td class="mar-col declined">11.3% <span class="arrow up">▲</span></td>
+          </tr>
+          <!-- Vero Moda -->
+          <tr>
+            <td>Vero Moda</td>
+            <td class="empty">—</td>
+            <td>100</td>
+            <td class="mar-col improved">2,599 <span class="arrow up">▲</span></td>
+            <td class="col-sep empty">—</td>
+            <td>1</td>
+            <td class="mar-col improved">74 <span class="arrow up">▲</span></td>
+            <td class="col-sep empty">—</td>
+            <td>$99.9</td>
+            <td class="mar-col declined">$35.1 <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td>83.8%</td>
+            <td class="mar-col declined">69.2% <span class="arrow down">▼</span></td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">20.0%</td>
+            <td class="col-sep empty">—</td>
+            <td>0.0%</td>
+            <td class="mar-col declined">23.7% <span class="arrow up">▲</span></td>
+          </tr>
+          <!-- Cardio Bunny -->
+          <tr>
+            <td>Cardio Bunny</td>
+            <td class="empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">455</td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">13</td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">$35.0</td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">75.3%</td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col empty">—</td>
+            <td class="col-sep empty">—</td>
+            <td class="empty">—</td>
+            <td class="mar-col">0.0%</td>
+          </tr>
+          <!-- Grand Total -->
+          <tr class="total-row">
+            <td>Grand Total</td>
+            <td>563,573</td>
+            <td>460,601</td>
+            <td class="mar-col improved">614,119 <span class="arrow up">▲</span></td>
+            <td class="col-sep">13,086</td>
+            <td>12,413</td>
+            <td class="mar-col improved">16,811 <span class="arrow up">▲</span></td>
+            <td class="col-sep">$43.1</td>
+            <td>$37.1</td>
+            <td class="mar-col declined">$36.5 <span class="arrow down">▼</span></td>
+            <td class="col-sep">57.5%</td>
+            <td>56.1%</td>
+            <td class="mar-col improved">59.3% <span class="arrow up">▲</span></td>
+            <td class="col-sep">5.2%</td>
+            <td>4.5%</td>
+            <td class="mar-col declined">6.4% <span class="arrow up">▲</span></td>
+            <td class="col-sep">10.0%</td>
+            <td>12.4%</td>
+            <td class="mar-col improved">12.4% <span class="arrow down">▼</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footnote">
+      Source: CY26 Sales data (net: delivered in month &minus; returned in month, no status filter) &bull; Green = improved vs Feb, Red = declined vs Feb &bull; GM % = (Net Revenue &minus; Net COGS) / Net Revenue &bull; Mktg % = Paid Spend (Marketing CSVs) / CWN Revenue for Mar; Paid Spend / Net Revenue for Jan &amp; Feb &bull; Ret % = Returned units / Delivered units in month; green &#9660; = lower returns (improved), red &#9650; = higher returns (worsened) &bull; Keds, Vero Moda &amp; Cardio Bunny had no activity in Jan; Vero Moda &amp; Cardio Bunny had no activity in Feb &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 3: CHANNEL-WISE PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w2-page3">
+    <div class="section-title"><span class="page-num">3</span> Channel-Wise Performance — Q1 2026</div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr class="group-row">
+            <th rowspan="2" style="vertical-align:bottom;">Channel</th>
+            <th colspan="3">$ Revenue</th>
+            <th colspan="2" style="border-left: 2px solid rgba(255,255,255,0.15);">vs Feb</th>
+            <th colspan="2" style="border-left: 2px solid rgba(255,255,255,0.15);">Mar Country Mix</th>
+            <th style="border-left: 2px solid rgba(255,255,255,0.15);" rowspan="2">Top 3 Brands (Mar)</th>
+          </tr>
+          <tr class="month-row">
+            <th>Jan</th>
+            <th>Feb</th>
+            <th class="mar-col">Mar</th>
+            <th class="col-sep">Δ ($)</th>
+            <th>Δ %</th>
+            <th class="col-sep">% KSA</th>
+            <th>% UAE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Namshi</td>
+            <td>264,803</td>
+            <td>259,073</td>
+            <td class="mar-col improved">399,738 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive">+140,665</span></td>
+            <td><span class="pill positive">+54.3%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:44px"></span>73.9%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:15px"></span>25.1%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $273.6K<br>Penti $52.7K<br>FC $32.2K</td>
+          </tr>
+          <tr>
+            <td>Noon</td>
+            <td>145,113</td>
+            <td>138,166</td>
+            <td class="mar-col improved">147,526 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive">+9,360</span></td>
+            <td><span class="pill positive">+6.8%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:36px"></span>59.4%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:24px"></span>40.6%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $130.2K<br>Campus $11.4K<br>Penti $3.9K</td>
+          </tr>
+          <tr>
+            <td>Trendyol</td>
+            <td>6,798</td>
+            <td>9,219</td>
+            <td class="mar-col improved">26,179 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive">+16,960</span></td>
+            <td><span class="pill positive">+184.0%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:45px"></span>75.3%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:15px"></span>24.7%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $16.2K<br>Penti $5.1K<br>Puma $4.3K</td>
+          </tr>
+          <tr>
+            <td>Amazon_1P</td>
+            <td>123,877</td>
+            <td>23,149</td>
+            <td class="mar-col declined">17,674 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">−5,475</span></td>
+            <td><span class="pill negative">−23.7%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:60px"></span>100%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $17.7K</td>
+          </tr>
+          <tr>
+            <td>Styli</td>
+            <td>10,658</td>
+            <td>6,345</td>
+            <td class="mar-col improved">12,843 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive">+6,498</span></td>
+            <td><span class="pill positive">+102.4%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:60px"></span>100%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $9.2K<br>Campus $3.7K</td>
+          </tr>
+          <tr>
+            <td>6th Street</td>
+            <td>6,050</td>
+            <td>4,219</td>
+            <td class="mar-col improved">6,090 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive">+1,871</span></td>
+            <td><span class="pill positive">+44.3%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:0px"></span>0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:60px"></span>100%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $3.6K<br>FC $2.4K<br>Campus $0.04K</td>
+          </tr>
+          <tr>
+            <td>CP</td>
+            <td>6,225</td>
+            <td>19,596</td>
+            <td class="mar-col declined">3,863 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">−15,733</span></td>
+            <td><span class="pill negative">−80.3%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:42px"></span>70.3%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:18px"></span>29.7%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">Penti $3.0K<br>USPA $0.8K<br>FC $0.1K</td>
+          </tr>
+          <tr>
+            <td>Amazon-3P</td>
+            <td>49</td>
+            <td>833</td>
+            <td class="mar-col declined">207 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">−626</span></td>
+            <td><span class="pill negative">−75.2%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:0px"></span>0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:60px"></span>100%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">Campus $0.2K</td>
+          </tr>
+          <tr class="total-row">
+            <td>Grand Total</td>
+            <td>563,573</td>
+            <td>460,601</td>
+            <td class="mar-col improved">614,120 <span class="arrow up">▲</span></td>
+            <td class="col-sep"><span class="pill positive" style="font-size:12px">+153,519</span></td>
+            <td><span class="pill positive" style="font-size:12px">+33.3%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:43px"></span>71.4%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:17px"></span>28.0%</span></td>
+            <td class="col-sep"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="drivers-title">Key Movement Drivers — Feb vs Mar</div>
+    <div class="drivers-subtitle">Brand-level breakdown for channels with significant month-on-month changes</div>
+
+    <div class="drivers-grid">
+      <!-- Namshi +$141K -->
+      <div class="driver-card up">
+        <div class="card-header">
+          <span class="ch-name">Namshi</span>
+          <span class="ch-delta up">+$140,665 (+54%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val up">+$69,401</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val up">+$36,894</span></div>
+        <div class="driver-row"><span class="brand-name">Campus</span><span class="driver-val up">+$14,814</span></div>
+      </div>
+
+      <!-- Trendyol +$17K -->
+      <div class="driver-card up">
+        <div class="card-header">
+          <span class="ch-name">Trendyol</span>
+          <span class="ch-delta up">+$16,960 (+184%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val up">+$12,808</span></div>
+        <div class="driver-row"><span class="brand-name">Puma</span><span class="driver-val up">+$2,237</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val up">+$1,312</span></div>
+      </div>
+
+      <!-- Noon +$9K -->
+      <div class="driver-card up">
+        <div class="card-header">
+          <span class="ch-name">Noon</span>
+          <span class="ch-delta up">+$9,360 (+7%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">Campus</span><span class="driver-val up">+$3,858</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val up">+$2,484</span></div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val up">+$2,090</span></div>
+      </div>
+
+      <!-- Styli +$6K -->
+      <div class="driver-card up">
+        <div class="card-header">
+          <span class="ch-name">Styli</span>
+          <span class="ch-delta up">+$6,498 (+102%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">Campus</span><span class="driver-val up">+$3,302</span></div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val up">+$3,196</span></div>
+      </div>
+
+      <!-- CP -$16K -->
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">CP</span>
+          <span class="ch-delta down">−$15,733 (−80%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">Puma</span><span class="driver-val down">−$10,207</span></div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val down">−$6,040</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val up">+$1,166</span></div>
+      </div>
+
+      <!-- Amazon 1P -$5K -->
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Amazon 1P</span>
+          <span class="ch-delta down">−$5,475 (−24%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">U.S. Polo Assn.</span><span class="driver-val down">−$5,475</span></div>
+      </div>
+    </div>
+
+    <div class="footnote">
+      Source: CY26 Sales data (net: delivered in month &minus; returned in month, no status filter) &bull; Green = improved vs Feb, Red = declined vs Feb &bull; Country mix based on Mar net revenue &bull; Driver cards show brand-level contribution to each channel's MoM change &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+  </div>
+
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 4: WOW PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w2-page4">
+    <div class="section-title"><span class="page-num">4</span> WoW Revenue Performance — March 2026</div>
+
+    <!-- Consolidated bar chart (all brands) -->
+    <div class="wow-card" style="margin-bottom:24px;">
+      <div class="wow-card-title">All Brands — Avg Daily Revenue <span class="peak-tag">Peak: Wk 5</span></div>
+      <div class="wow-bar-row">
+        <span class="wow-bar-label">Wk 1 <span style="color:#999;font-size:10px">(Mar 1–7)</span></span>
+        <div class="wow-bar-track"><div class="wow-bar-fill" style="width:87.7%"><span class="wow-bar-value">$21,117</span></div></div>
+        <span class="wow-change na">—</span>
+      </div>
+      <div class="wow-bar-row">
+        <span class="wow-bar-label">Wk 2 <span style="color:#999;font-size:10px">(Mar 8–14)</span></span>
+        <div class="wow-bar-track"><div class="wow-bar-fill" style="width:95.1%"><span class="wow-bar-value">$22,890</span></div></div>
+        <span class="wow-change up">+8.4%</span>
+      </div>
+      <div class="wow-bar-row">
+        <span class="wow-bar-label">Wk 3 <span style="color:#999;font-size:10px">(Mar 15–21)</span></span>
+        <div class="wow-bar-track"><div class="wow-bar-fill" style="width:93.2%"><span class="wow-bar-value">$22,439</span></div></div>
+        <span class="wow-change down">−2.0%</span>
+      </div>
+      <div class="wow-bar-row">
+        <span class="wow-bar-label">Wk 4 <span style="color:#999;font-size:10px">(Mar 22–28)</span></span>
+        <div class="wow-bar-track"><div class="wow-bar-fill" style="width:45.5%"><span class="wow-bar-value">$10,965</span></div></div>
+        <span class="wow-change down">−51.1%</span>
+      </div>
+      <div class="wow-bar-row">
+        <span class="wow-bar-label">Wk 5 <span style="color:#999;font-size:10px">(Mar 29–31)</span></span>
+        <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$24,078</span></div></div>
+        <span class="wow-change up">+119.6%</span>
+      </div>
+      <div class="wow-monthly-ref">
+        <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$18,180</span>/day</span>
+        <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$16,450</span>/day</span>
+        <span style="margin-left:16px;"><span class="ref-dot" style="background:var(--opptra-orange);"></span> Mar Avg: <span class="ref-val">$19,810</span>/day</span>
+      </div>
+    </div>
+
+    <!-- Insight strip -->
+    <div class="wow-insight-strip">
+      <h3>Key Insights</h3>
+      <ul>
+        <li><strong>Wk 4 (Mar 22–28) saw a sharp daily-rate drop</strong> across the board (−51% vs Wk 3), followed by a strong rebound in <strong>Wk 5 (Mar 29–31)</strong> which hit the highest daily rate at $24,078/day.</li>
+        <li>USPA, Campus, and Keds all peaked in <strong>Wk 5</strong>, driving the month-end surge — suggesting a late-month demand driver or campaign push.</li>
+        <li>Penti and French Connection peaked in <strong>Wk 2</strong>, with Penti sustaining &gt;$2,500/day through Wk 3 before tapering off.</li>
+        <li>Vero Moda and Cardio Bunny are ramping brands — both showed progressive weekly growth through the month, albeit from a small base.</li>
+      </ul>
+    </div>
+
+    <!-- Brand bar charts -->
+    <div class="wow-grid">
+
+      <!-- USPA -->
+      <div class="wow-card">
+        <div class="wow-card-title">U.S. Polo Assn. <span class="peak-tag">Peak: Wk 5</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:89.4%"><span class="wow-bar-value">$16,136</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:93.3%"><span class="wow-bar-value">$16,834</span></div></div>
+          <span class="wow-change up">+4.3%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:92.0%"><span class="wow-bar-value">$16,598</span></div></div>
+          <span class="wow-change down">−1.4%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:39.6%"><span class="wow-bar-value">$7,149</span></div></div>
+          <span class="wow-change down">−56.9%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$18,042</span></div></div>
+          <span class="wow-change up">+152.4%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$16,063</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$13,370</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Penti -->
+      <div class="wow-card">
+        <div class="wow-card-title">Penti <span class="peak-tag">Peak: Wk 2</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:81.0%"><span class="wow-bar-value">$2,173</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$2,683</span></div></div>
+          <span class="wow-change up">+23.5%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:95.6%"><span class="wow-bar-value">$2,566</span></div></div>
+          <span class="wow-change down">−4.4%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:41.1%"><span class="wow-bar-value">$1,104</span></div></div>
+          <span class="wow-change down">−57.0%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:62.1%"><span class="wow-bar-value">$1,666</span></div></div>
+          <span class="wow-change up">+50.9%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$343</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$815</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Campus -->
+      <div class="wow-card">
+        <div class="wow-card-title">Campus <span class="peak-tag">Peak: Wk 5</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:57.1%"><span class="wow-bar-value">$1,375</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:58.9%"><span class="wow-bar-value">$1,420</span></div></div>
+          <span class="wow-change up">+3.3%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:60.8%"><span class="wow-bar-value">$1,465</span></div></div>
+          <span class="wow-change up">+3.2%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:50.3%"><span class="wow-bar-value">$1,213</span></div></div>
+          <span class="wow-change down">−17.2%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$2,410</span></div></div>
+          <span class="wow-change up">+98.7%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$781</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$841</span>/day</span>
+        </div>
+      </div>
+
+      <!-- French Connection -->
+      <div class="wow-card">
+        <div class="wow-card-title">French Connection <span class="peak-tag">Peak: Wk 2</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:65.5%"><span class="wow-bar-value">$993</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$1,516</span></div></div>
+          <span class="wow-change up">+52.7%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:89.4%"><span class="wow-bar-value">$1,356</span></div></div>
+          <span class="wow-change down">−10.6%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:55.0%"><span class="wow-bar-value">$834</span></div></div>
+          <span class="wow-change down">−38.5%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:76.6%"><span class="wow-bar-value">$1,162</span></div></div>
+          <span class="wow-change up">+39.3%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$904</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$924</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Keds -->
+      <div class="wow-card">
+        <div class="wow-card-title">Keds <span class="peak-tag">Peak: Wk 5</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:54.3%"><span class="wow-bar-value">$255</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:57.7%"><span class="wow-bar-value">$271</span></div></div>
+          <span class="wow-change up">+6.3%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:64.5%"><span class="wow-bar-value">$303</span></div></div>
+          <span class="wow-change up">+11.8%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:55.7%"><span class="wow-bar-value">$262</span></div></div>
+          <span class="wow-change down">−13.5%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$470</span></div></div>
+          <span class="wow-change up">+79.4%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">—</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$59</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Puma -->
+      <div class="wow-card">
+        <div class="wow-card-title">Puma <span class="peak-tag">Peak: Wk 1</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$186</span></div></div>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:76.9%"><span class="wow-bar-value">$143</span></div></div>
+          <span class="wow-change down">−23.1%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:34.4%"><span class="wow-bar-value">$64</span></div></div>
+          <span class="wow-change down">−55.2%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:83.3%"><span class="wow-bar-value">$155</span></div></div>
+          <span class="wow-change up">+142.2%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:80.1%"><span class="wow-bar-value">$149</span></div></div>
+          <span class="wow-change down">−3.9%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">$89</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$438</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Vero Moda -->
+      <div class="wow-card">
+        <div class="wow-card-title">Vero Moda <span class="peak-tag">Peak: Wk 4</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:2%"></div></div>
+          <span style="font-size:11px;font-weight:600;color:var(--opptra-grey);margin-left:6px;min-width:36px;">$0</span>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:11.6%"></div></div>
+          <span style="font-size:11px;font-weight:600;color:var(--opptra-grey);margin-left:6px;min-width:36px;">$23</span>
+          <span class="wow-change na">n/a</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:42.4%"><span class="wow-bar-value">$84</span></div></div>
+          <span class="wow-change up">+265%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$198</span></div></div>
+          <span class="wow-change up">+136%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:77.8%"><span class="wow-bar-value">$154</span></div></div>
+          <span class="wow-change down">−22.2%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">—</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">$4</span>/day</span>
+        </div>
+      </div>
+
+      <!-- Cardio Bunny -->
+      <div class="wow-card">
+        <div class="wow-card-title">Cardio Bunny <span class="peak-tag">Peak: Wk 4</span></div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 1</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:2%"></div></div>
+          <span style="font-size:11px;font-weight:600;color:var(--opptra-grey);margin-left:6px;min-width:36px;">$0</span>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 2</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:2%"></div></div>
+          <span style="font-size:11px;font-weight:600;color:var(--opptra-grey);margin-left:6px;min-width:36px;">$0</span>
+          <span class="wow-change na">—</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 3</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:5.9%"></div></div>
+          <span style="font-size:11px;font-weight:600;color:var(--opptra-grey);margin-left:6px;min-width:36px;">$3</span>
+          <span class="wow-change na">n/a</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 4</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill peak" style="width:100%"><span class="wow-bar-value">$51</span></div></div>
+          <span class="wow-change up">+1600%</span>
+        </div>
+        <div class="wow-bar-row">
+          <span class="wow-bar-label">Wk 5</span>
+          <div class="wow-bar-track"><div class="wow-bar-fill" style="width:51.0%"><span class="wow-bar-value">$26</span></div></div>
+          <span class="wow-change down">−49.0%</span>
+        </div>
+        <div class="wow-monthly-ref">
+          <span><span class="ref-dot" style="background:#a8b5c8;"></span> Jan Avg: <span class="ref-val">—</span>/day</span>
+          <span><span class="ref-dot" style="background:#6b7fa3;"></span> Feb Avg: <span class="ref-val">—</span>/day</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footnote">
+      Source: CY26 Sales data (net: delivered in day range &minus; returned in day range, no status filter) &bull; Wk 1–4 = 7 days each, Wk 5 = 3 days (Mar 29–31) &bull; Values = Avg $ Daily Net Revenue &bull; Jan Avg = Jan net revenue &divide; 31 days, Feb Avg = Feb net revenue &divide; 28 days &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 5: PERFORMANCE MARKETING ═══════════════ -->
+  <div class="page-section" id="w2-page5">
+    <div class="section-title"><span class="page-num">5</span> March Performance Marketing — By Brand &amp; Country</div>
+
+    <!-- ── KSA Table ── -->
+    <div style="margin-bottom:28px">
+      <h3 style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--opptra-navy);margin-bottom:12px;">KSA</h3>
+      <div class="table-card">
+        <table class="perf-table" style="width:100%;border-collapse:collapse;font-size:12.5px;">
+          <thead>
+            <tr style="background:var(--opptra-navy);color:var(--opptra-white);">
+              <th style="text-align:left;padding:10px 14px;font-weight:600;">Brand</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Mktg Spend</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Views</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">CTR %</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Conversion %</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Cost / View</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">ROAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">U.S. Polo Assn.</td>
+              <td style="text-align:right;padding:10px 14px;">$13,935</td>
+              <td style="text-align:right;padding:10px 14px;">6,515,122</td>
+              <td style="text-align:right;padding:10px 14px;">1.12%</td>
+              <td style="text-align:right;padding:10px 14px;">2.55%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0021</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">7.31x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Penti</td>
+              <td style="text-align:right;padding:10px 14px;">$3,399</td>
+              <td style="text-align:right;padding:10px 14px;">1,773,381</td>
+              <td style="text-align:right;padding:10px 14px;">1.09%</td>
+              <td style="text-align:right;padding:10px 14px;">2.45%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0019</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">3.75x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Campus</td>
+              <td style="text-align:right;padding:10px 14px;">$2,527</td>
+              <td style="text-align:right;padding:10px 14px;">1,072,316</td>
+              <td style="text-align:right;padding:10px 14px;">1.27%</td>
+              <td style="text-align:right;padding:10px 14px;">1.32%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0024</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">2.14x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Keds</td>
+              <td style="text-align:right;padding:10px 14px;">$1,075</td>
+              <td style="text-align:right;padding:10px 14px;">725,764</td>
+              <td style="text-align:right;padding:10px 14px;">0.81%</td>
+              <td style="text-align:right;padding:10px 14px;">0.63%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0015</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">2.22x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Vero Moda</td>
+              <td style="text-align:right;padding:10px 14px;">$100</td>
+              <td style="text-align:right;padding:10px 14px;">37,119</td>
+              <td style="text-align:right;padding:10px 14px;">2.16%</td>
+              <td style="text-align:right;padding:10px 14px;">0.25%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0027</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--red);">1.75x</td>
+            </tr>
+            <tr style="border-top:2px solid var(--opptra-navy);background:#f9f9fb;">
+              <td style="padding:10px 14px;font-weight:700;color:var(--opptra-navy);">Total KSA</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">$21,035</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">10,123,702</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">1.11%</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">2.27%</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">$0.0021</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">5.83x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── UAE Table ── -->
+    <div style="margin-bottom:28px">
+      <h3 style="font-family:var(--font-heading);font-weight:700;font-size:15px;color:var(--opptra-navy);margin-bottom:12px;">UAE</h3>
+      <div class="table-card">
+        <table class="perf-table" style="width:100%;border-collapse:collapse;font-size:12.5px;">
+          <thead>
+            <tr style="background:var(--opptra-navy);color:var(--opptra-white);">
+              <th style="text-align:left;padding:10px 14px;font-weight:600;">Brand</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Mktg Spend</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Views</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">CTR %</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Conversion %</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">Cost / View</th>
+              <th style="text-align:right;padding:10px 14px;font-weight:600;">ROAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">U.S. Polo Assn.</td>
+              <td style="text-align:right;padding:10px 14px;">$13,677</td>
+              <td style="text-align:right;padding:10px 14px;">6,227,204</td>
+              <td style="text-align:right;padding:10px 14px;">1.07%</td>
+              <td style="text-align:right;padding:10px 14px;">2.24%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0022</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">4.89x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Penti</td>
+              <td style="text-align:right;padding:10px 14px;">$1,687</td>
+              <td style="text-align:right;padding:10px 14px;">481,845</td>
+              <td style="text-align:right;padding:10px 14px;">1.55%</td>
+              <td style="text-align:right;padding:10px 14px;">4.61%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0035</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">3.52x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Campus</td>
+              <td style="text-align:right;padding:10px 14px;">$1,144</td>
+              <td style="text-align:right;padding:10px 14px;">457,426</td>
+              <td style="text-align:right;padding:10px 14px;">1.10%</td>
+              <td style="text-align:right;padding:10px 14px;">1.07%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0025</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--red);">1.30x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Keds</td>
+              <td style="text-align:right;padding:10px 14px;">$1,065</td>
+              <td style="text-align:right;padding:10px 14px;">702,668</td>
+              <td style="text-align:right;padding:10px 14px;">0.68%</td>
+              <td style="text-align:right;padding:10px 14px;">0.85%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0015</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">2.15x</td>
+            </tr>
+            <tr style="border-bottom:1px solid #eee;">
+              <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);">Vero Moda</td>
+              <td style="text-align:right;padding:10px 14px;">$420</td>
+              <td style="text-align:right;padding:10px 14px;">165,418</td>
+              <td style="text-align:right;padding:10px 14px;">1.36%</td>
+              <td style="text-align:right;padding:10px 14px;">0.67%</td>
+              <td style="text-align:right;padding:10px 14px;">$0.0025</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--red);">1.55x</td>
+            </tr>
+            <tr style="border-top:2px solid var(--opptra-navy);background:#f9f9fb;">
+              <td style="padding:10px 14px;font-weight:700;color:var(--opptra-navy);">Total UAE</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">$17,992</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">8,034,561</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">1.08%</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">2.26%</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;">$0.0022</td>
+              <td style="text-align:right;padding:10px 14px;font-weight:700;color:var(--green);">4.29x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="footnote">
+      Source: Marketing Perf Mar CSV (Namshi &amp; Noon channels) &bull; CTR = Paid Clicks / Paid Views &bull; Conversion = Paid Orders / Paid Clicks &bull; ROAS = Paid Sales / Paid Spend &bull; French Connection, Puma, Cardio Bunny: no paid campaigns in Mar data
+    </div>
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 6: INVENTORY ═══════════════ -->
+  <div class="page-section" id="w2-page6">
+    <div class="section-title"><span class="page-num">6</span> Inventory — Stock, Rate of Sale &amp; Weeks Cover by Brand</div>
+
+    <div class="table-card" style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:900px;">
+        <thead>
+          <tr style="background:var(--opptra-navy);color:var(--opptra-white);">
+            <th rowspan="2" style="text-align:left;padding:10px 14px;font-weight:600;border-right:2px solid rgba(255,255,255,0.15);vertical-align:bottom;">Brand</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">Total GCC (incl. FZ)</th>
+            <th colspan="2" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">Free Zone</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">KSA</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.2);">UAE</th>
+          </tr>
+          <tr style="background:var(--opptra-navy);color:rgba(255,255,255,0.85);">
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">WOC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- U.S. Polo Assn. — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">U.S. Polo Assn.</td>
+            <td style="text-align:right;padding:10px 10px;">78,893</td>
+            <td style="text-align:right;padding:10px 10px;">2,378</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">33.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">27,791</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">11.7</span></td>
+            <td style="text-align:right;padding:10px 10px;">27,904</td>
+            <td style="text-align:right;padding:10px 10px;">1,722</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">16.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">23,198</td>
+            <td style="text-align:right;padding:10px 10px;">656</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">35.4</span></td>
+          </tr>
+          <!-- Penti — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Penti</td>
+            <td style="text-align:right;padding:10px 10px;">9,224</td>
+            <td style="text-align:right;padding:10px 10px;">784</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">11.8</span></td>
+            <td style="text-align:right;padding:10px 10px;">121</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">0.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">3,829</td>
+            <td style="text-align:right;padding:10px 10px;">449</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">8.5</span></td>
+            <td style="text-align:right;padding:10px 10px;">5,274</td>
+            <td style="text-align:right;padding:10px 10px;">335</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">15.8</span></td>
+          </tr>
+          <!-- Campus — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Campus</td>
+            <td style="text-align:right;padding:10px 10px;">14,891</td>
+            <td style="text-align:right;padding:10px 10px;">400</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">37.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">506</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">1.3</span></td>
+            <td style="text-align:right;padding:10px 10px;">7,981</td>
+            <td style="text-align:right;padding:10px 10px;">332</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">24.1</span></td>
+            <td style="text-align:right;padding:10px 10px;">6,404</td>
+            <td style="text-align:right;padding:10px 10px;">69</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">93.4</span></td>
+          </tr>
+          <!-- French Connection UK — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">French Connection UK</td>
+            <td style="text-align:right;padding:10px 10px;">20,029</td>
+            <td style="text-align:right;padding:10px 10px;">306</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">65.4</span></td>
+            <td style="text-align:right;padding:10px 10px;">6,112</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">20.0</span></td>
+            <td style="text-align:right;padding:10px 10px;">3,986</td>
+            <td style="text-align:right;padding:10px 10px;">127</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">31.3</span></td>
+            <td style="text-align:right;padding:10px 10px;">9,931</td>
+            <td style="text-align:right;padding:10px 10px;">179</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">55.5</span></td>
+          </tr>
+          <!-- Keds — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Keds</td>
+            <td style="text-align:right;padding:10px 10px;">4,896</td>
+            <td style="text-align:right;padding:10px 10px;">39</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">127</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,345</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">34.9</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,558</td>
+            <td style="text-align:right;padding:10px 10px;">16</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">98.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,993</td>
+            <td style="text-align:right;padding:10px 10px;">23</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">88.1</span></td>
+          </tr>
+          <!-- PUMA — ROS: last 30 days -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">PUMA</td>
+            <td style="text-align:right;padding:10px 10px;">4,193</td>
+            <td style="text-align:right;padding:10px 10px;">42</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">100</span></td>
+            <td style="text-align:right;padding:10px 10px;">26</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">0.6</span></td>
+            <td style="text-align:right;padding:10px 10px;">3,518</td>
+            <td style="text-align:right;padding:10px 10px;">42</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">84.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">649</td>
+            <td style="text-align:right;padding:10px 10px;">0</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">&mdash;</span></td>
+          </tr>
+          <!-- Vero Moda — ROS: since first sale (23 days, launched Mar 9) -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Vero Moda <span style="font-size:10px;color:var(--opptra-orange);font-weight:500;">NEW</span></td>
+            <td style="text-align:right;padding:10px 10px;">4,082</td>
+            <td style="text-align:right;padding:10px 10px;">23</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">179</span></td>
+            <td style="text-align:right;padding:10px 10px;">776</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">34.0</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,614</td>
+            <td style="text-align:right;padding:10px 10px;">6.4</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">253</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,692</td>
+            <td style="text-align:right;padding:10px 10px;">16</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">103</span></td>
+          </tr>
+          <!-- Cardio Bunny — ROS: since first sale (16 days, launched Mar 16) -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Cardio Bunny <span style="font-size:10px;color:var(--opptra-orange);font-weight:500;">NEW</span></td>
+            <td style="text-align:right;padding:10px 10px;">2,680</td>
+            <td style="text-align:right;padding:10px 10px;">5.7</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">471</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,208</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">212</span></td>
+            <td style="text-align:right;padding:10px 10px;">608</td>
+            <td style="text-align:right;padding:10px 10px;">0.9</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">695</span></td>
+            <td style="text-align:right;padding:10px 10px;">864</td>
+            <td style="text-align:right;padding:10px 10px;">4.8</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">180</span></td>
+          </tr>
+          <!-- GRAND TOTAL -->
+          <tr style="border-top:2px solid var(--opptra-navy);background:#f9f9fb;">
+            <td style="padding:10px 14px;font-weight:700;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">TOTAL</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">138,888</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">3,976</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">34.9</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">37,885</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">9.5</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">50,998</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">2,694</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">18.9</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">50,005</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">1,282</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">39.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WOC Legend -->
+    <div style="display:flex;gap:16px;margin-top:14px;font-size:11px;color:var(--opptra-grey);">
+      <span>WOC colour guide:</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#fce8e8;margin-right:4px;vertical-align:middle;"></span> &lt; 52 wks</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#fff3e0;margin-right:4px;vertical-align:middle;"></span> 52–100 wks (overstocked)</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#e8e8e8;margin-right:4px;vertical-align:middle;"></span> &gt; 100 wks (dead stock / no sales)</span>
+    </div>
+
+    <div class="footnote" style="margin-top:10px;">
+      Source: OMS (02 Apr 2026) + Noon FBN snapshots &bull; ROS: last 30 days (02&ndash;31 Mar) for established brands; since first sale for newer brands (Vero Moda: 23 days from 09 Mar, Cardio Bunny: 16 days from 16 Mar) &bull; Delivered only &bull; WOC = Stock &divide; Weekly ROS &bull; No in-transit adjustment &bull; Excludes Nautica
+    </div>
+  </div>
+
+  <!-- ── divider ── -->
+  <div class="page-divider"><hr></div>
+
+  <!-- ═══════════════ PAGE 7: LAUNCH CALENDAR ═══════════════ -->
+  <div class="page-section" id="w2-page7">
+    <div class="section-title"><span class="page-num">7</span> Opptra Softlines — Brand Launch Calendar</div>
+
+    <div class="table-card">
+      <table class="launch-table">
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th class="live-col">Live</th>
+            <th class="month-col">Apr</th>
+            <th class="month-col">May</th>
+            <th class="month-col">Jun</th>
+            <th class="month-col">Jul</th>
+            <th class="disc-col">Contract Discussion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ── GCC ── -->
+          <tr>
+            <td>GCC<span class="market-count">8 live, 2 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">US Polo</span>
+              <span class="brand-pill live">Penti</span>
+              <span class="brand-pill live">CAMPUS</span>
+              <span class="brand-pill live">Puma</span>
+              <span class="brand-pill live">French Connection</span>
+              <span class="brand-pill live">Vero Moda</span>
+              <span class="brand-pill live">Keds</span>
+              <span class="brand-pill live">Cardio Bunny</span>
+            </td>
+            <td class="cell-month"></td>
+            <td class="cell-month"></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">White Stuff</span></td>
+            <td class="cell-disc"></td>
+          </tr>
+          <!-- ── India ── -->
+          <tr>
+            <td>India<span class="market-count">1 live, 3 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">Cardio Bunny</span>
+            </td>
+            <td class="cell-month"><span class="brand-pill upcoming">Jack & Jones</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Lyle & Scott</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"></td>
+            <td class="cell-disc">
+              <span class="brand-pill discussion">Penti</span>
+            </td>
+          </tr>
+          <!-- ── SEA ── -->
+          <tr>
+            <td>SEA<span class="market-count">1 live, 3 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">CAMPUS</span>
+            </td>
+            <td class="cell-month"></td>
+            <td class="cell-month">
+              <span class="brand-pill upcoming">Penti</span>
+              <span class="brand-pill upcoming">Keds</span>
+            </td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"></td>
+            <td class="cell-disc">
+              <span class="brand-pill discussion">US Polo</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Brand Manager Strip -->
+    <div class="manager-strip">
+      <div class="manager-group">
+        <span class="manager-name">Sumit:</span>
+        <span class="manager-brands">US Polo, Penti, CAMPUS, Puma</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Sarah:</span>
+        <span class="manager-brands">French Connection, Vero Moda, Von Dutch</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Prachi:</span>
+        <span class="manager-brands">Keds, White Stuff</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Harjeet:</span>
+        <span class="manager-brands">Cardio Bunny, Jack & Jones</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Carine:</span>
+        <span class="manager-brands">Lyle & Scott</span>
+      </div>
+    </div>
+
+    <div class="footnote">
+      Source: Opptra Softlines Launch Calendar &bull; Keds India = TBD (not shown)
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAV HIGHLIGHT SCRIPT (Week 2) ═══════════════ -->
+  <script>
+    {
+      // Highlight the nav link whose section is currently in view
+      const sections = document.querySelectorAll('.page-section');
+      const navLinks = document.querySelectorAll('.page-nav a');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const link = document.querySelector(`.page-nav a[href="#${entry.target.id}"]`);
+            if (link) link.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-120px 0px -60% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+  </div>
+
+  <!-- ═══════ WEEK 1: 24 Mar – 27 Mar 2026 ═══════ -->
+  <div class="week-view" id="view-week1">
+<div class="page-nav">
+    <a href="#w1-page1" class="active">MTD Revenue vs Target</a>
+    <a href="#w1-page2">Month-on-Month Trend</a>
+    <a href="#w1-page3">Channel Performance</a>
+    <a href="#w1-page4">WoW Performance</a>
+    <a href="#w1-page5">Performance Marketing</a>
+    <a href="#w1-page6">Inventory</a>
+    <a href="#w1-page7">Launch Calendar</a>
+  </div>
+
+<!-- ═══════════════ PAGE 1: MTD REVENUE PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w1-page1">
     <div class="section-title"><span class="page-num">1</span> MTD Revenue Performance — Target vs Trending</div>
 
     <div class="summary-row">
@@ -810,7 +2536,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 2: MONTH-ON-MONTH PERFORMANCE ═══════════════ -->
-  <div class="page-section" id="page2">
+  <div class="page-section" id="w1-page2">
     <div class="section-title"><span class="page-num">2</span> Month-on-Month Performance — Q1 2026</div>
 
     <div class="table-card">
@@ -1028,7 +2754,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 3: CHANNEL-WISE PERFORMANCE ═══════════════ -->
-  <div class="page-section" id="page3">
+  <div class="page-section" id="w1-page3">
     <div class="section-title"><span class="page-num">3</span> Channel-Wise Performance — Q1 2026</div>
 
     <div class="table-card">
@@ -1227,7 +2953,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 4: WOW PERFORMANCE ═══════════════ -->
-  <div class="page-section" id="page4">
+  <div class="page-section" id="w1-page4">
     <div class="section-title"><span class="page-num">4</span> WoW Revenue Performance — March 2026</div>
 
     <!-- Week summary cards -->
@@ -1485,7 +3211,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 5: PERFORMANCE MARKETING ═══════════════ -->
-  <div class="page-section" id="page5">
+  <div class="page-section" id="w1-page5">
     <div class="section-title"><span class="page-num">5</span> March Performance Marketing — By Brand &amp; Country</div>
 
     <!-- ── KSA Table ── -->
@@ -1640,7 +3366,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 6: INVENTORY ═══════════════ -->
-  <div class="page-section" id="page6">
+  <div class="page-section" id="w1-page6">
     <div class="section-title"><span class="page-num">6</span> Inventory — Stock, Rate of Sale &amp; Weeks Cover by Brand</div>
 
     <div class="table-card" style="overflow-x:auto;">
@@ -1839,7 +3565,7 @@
   <div class="page-divider"><hr></div>
 
   <!-- ═══════════════ PAGE 7: LAUNCH CALENDAR ═══════════════ -->
-  <div class="page-section" id="page7">
+  <div class="page-section" id="w1-page7">
     <div class="section-title"><span class="page-num">7</span> Opptra Softlines — Brand Launch Calendar</div>
 
     <div class="table-card">
@@ -1945,21 +3671,34 @@
     </div>
   </div>
 
-  <!-- ═══════════════ NAV HIGHLIGHT SCRIPT ═══════════════ -->
+  <!-- ═══════════════ NAV HIGHLIGHT SCRIPT (Week 1) ═══════════════ -->
   <script>
-    // Highlight the nav link whose section is currently in view
-    const sections = document.querySelectorAll('.page-section');
-    const navLinks = document.querySelectorAll('.page-nav a');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          const link = document.querySelector(`.page-nav a[href="#${entry.target.id}"]`);
-          if (link) link.classList.add('active');
-        }
+    {
+      // Highlight the nav link whose section is currently in view
+      const sections = document.querySelectorAll('.page-section');
+      const navLinks = document.querySelectorAll('.page-nav a');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const link = document.querySelector(`.page-nav a[href="#${entry.target.id}"]`);
+            if (link) link.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-120px 0px -60% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+  </div>
+
+  <script>
+    function switchWeek(weekId) {
+      document.querySelectorAll('.week-view').forEach(function(el) {
+        el.classList.remove('active');
       });
-    }, { rootMargin: '-120px 0px -60% 0px' });
-    sections.forEach(s => observer.observe(s));
+      document.getElementById('view-' + weekId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
 
 </body>
