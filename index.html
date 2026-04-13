@@ -672,14 +672,1757 @@
     <div class="week-selector">
       <label>Reporting Week</label>
       <select id="weekPicker" onchange="switchWeek(this.value)">
-        <option value="week2" selected>31 Mar – 06 Apr 2026</option>
+        <option value="week3" selected>01 Apr – 10 Apr 2026</option>
+        <option value="week2">31 Mar – 06 Apr 2026</option>
         <option value="week1">24 Mar – 27 Mar 2026</option>
       </select>
     </div>
   </div>
 
-  <!-- ═══════ WEEK 2: 31 Mar – 06 Apr 2026 (LATEST) ═══════ -->
-  <div class="week-view active" id="view-week2">
+  <!-- ═══════ WEEK 3: 01 Apr – 10 Apr 2026 (LATEST) ═══════ -->
+  <div class="week-view active" id="view-week3">
+
+
+  <!-- ═══════════════ GLOBAL HEADER ═══════════════ -->
+  
+
+  <!-- ═══════════════ PAGE NAV ═══════════════ -->
+  <div class="page-nav">
+    <a href="#w3-page1" class="active">Apr Revenue vs Target</a>
+    <a href="#w3-page2">Month-on-Month Trend</a>
+    <a href="#w3-page3">Channel Performance</a>
+    <a href="#w3-page4">WoW Revenue</a>
+    <a href="#w3-page5">Performance Marketing</a>
+    <a href="#w3-page6">Inventory</a>
+    <a href="#w3-page7">Launch Calendar</a>
+  </div>
+
+  <!-- ═══════════════ PAGE 1: APRIL REVENUE PERFORMANCE ═══════════════ -->
+  <div class="page-section" id="w3-page1">
+    <div class="section-title"><span class="page-num">1</span> April Revenue Performance — MTD (1–10 Apr)</div>
+
+    <div class="summary-row">
+      <div class="summary-card">
+        <div class="label">Monthly Target</div>
+        <div class="value">$495,000</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">MTD Revenue (10 days)</div>
+        <div class="value">$160,346</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Expected Revenue (30d)</div>
+        <div class="value">$481,037</div>
+      </div>
+      <div class="summary-card accent">
+        <div class="label">Shortfall (Expected vs Target)</div>
+        <div class="value">-$13,963</div>
+        <span class="surplus-tag negative">-2.8%</span>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Target ($)</th>
+            <th>MTD Rev ($)</th>
+            <th>Expected ($)</th>
+            <th>Δ ($)</th>
+            <th>Δ %</th>
+            <th class="col-sep">Units</th>
+            <th>$ ASP</th>
+            <th class="col-sep">% KSA</th>
+            <th>% UAE</th>
+            <th class="col-sep">GM %</th>
+            <th class="col-sep">Mktg %</th>
+            <th class="col-sep">Ret %</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td>325,000</td>
+            <td>114,989</td>
+            <td>344,966</td>
+            <td><span class="pill positive">+19,966</span></td>
+            <td><span class="pill positive">+6.1%</span></td>
+            <td class="col-sep">2,984</td>
+            <td>$38.5</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:44px"></span>73.4%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:15px"></span>25.2%</span></td>
+            <td class="col-sep">62.3%</td>
+            <td class="col-sep">7.0%</td>
+            <td class="col-sep">14.0%</td>
+          </tr>
+
+          <tr>
+            <td>Penti</td>
+            <td>50,000</td>
+            <td>13,149</td>
+            <td>39,447</td>
+            <td><span class="pill negative">-10,553</span></td>
+            <td><span class="pill negative">-21.1%</span></td>
+            <td class="col-sep">852</td>
+            <td>$15.4</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:25px"></span>43.1%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:32px"></span>54.8%</span></td>
+            <td class="col-sep">59.8%</td>
+            <td class="col-sep">7.0%</td>
+            <td class="col-sep">7.0%</td>
+          </tr>
+
+          <tr>
+            <td>Campus</td>
+            <td>45,000</td>
+            <td>21,170</td>
+            <td>63,510</td>
+            <td><span class="pill positive">+18,510</span></td>
+            <td><span class="pill positive">+41.1%</span></td>
+            <td class="col-sep">988</td>
+            <td>$21.4</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:49px"></span>82.1%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:10px"></span>16.9%</span></td>
+            <td class="col-sep">58.1%</td>
+            <td class="col-sep">8.4%</td>
+            <td class="col-sep">15.2%</td>
+          </tr>
+
+          <tr>
+            <td>French Connection</td>
+            <td>32,000</td>
+            <td>5,880</td>
+            <td>17,640</td>
+            <td><span class="pill negative">-14,360</span></td>
+            <td><span class="pill negative">-44.9%</span></td>
+            <td class="col-sep">376</td>
+            <td>$15.6</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:21px"></span>35.3%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:36px"></span>60.1%</span></td>
+            <td class="col-sep">31.1%</td>
+            <td class="col-sep"><span class="empty">—</span></td>
+            <td class="col-sep">48.4%</td>
+          </tr>
+
+          <tr>
+            <td>Keds</td>
+            <td>10,000</td>
+            <td>2,072</td>
+            <td>6,215</td>
+            <td><span class="pill negative">-3,785</span></td>
+            <td><span class="pill negative">-37.8%</span></td>
+            <td class="col-sep">60</td>
+            <td>$34.5</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:23px"></span>39.5%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:34px"></span>57.8%</span></td>
+            <td class="col-sep">56.4%</td>
+            <td class="col-sep">13.7%</td>
+            <td class="col-sep">30.0%</td>
+          </tr>
+
+          <tr>
+            <td>Puma</td>
+            <td>18,000</td>
+            <td>955</td>
+            <td>2,866</td>
+            <td><span class="pill negative">-15,134</span></td>
+            <td><span class="pill negative">-84.1%</span></td>
+            <td class="col-sep">55</td>
+            <td>$17.4</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:60px"></span>100.0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:4px"></span>0.0%</span></td>
+            <td class="col-sep">31.9%</td>
+            <td class="col-sep"><span class="empty">—</span></td>
+            <td class="col-sep">12.7%</td>
+          </tr>
+
+          <tr>
+            <td>Vero Moda</td>
+            <td>10,000</td>
+            <td>2,182</td>
+            <td>6,547</td>
+            <td><span class="pill negative">-3,453</span></td>
+            <td><span class="pill negative">-34.5%</span></td>
+            <td class="col-sep">89</td>
+            <td>$24.5</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:12px"></span>21.5%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:47px"></span>78.5%</span></td>
+            <td class="col-sep">65.5%</td>
+            <td class="col-sep">31.0%</td>
+            <td class="col-sep">31.5%</td>
+          </tr>
+
+          <tr>
+            <td>Cardio Bunny</td>
+            <td>5,000</td>
+            <td>-51</td>
+            <td>-154</td>
+            <td><span class="pill negative">-5,154</span></td>
+            <td><span class="pill negative">-103.1%</span></td>
+            <td class="col-sep">5</td>
+            <td>$-10.3</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:4px"></span>0.0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:4px"></span>0.0%</span></td>
+            <td class="col-sep">99.8%</td>
+            <td class="col-sep"><span class="empty">—</span></td>
+            <td class="col-sep">100.0%</td>
+          </tr>
+
+          <tr class="total-row">
+            <td>Grand Total</td>
+            <td>495,000</td>
+            <td>160,346</td>
+            <td>481,037</td>
+            <td><span class="pill negative" style="font-size:12px">-13,963</span></td>
+            <td><span class="pill negative" style="font-size:12px">-2.8%</span></td>
+            <td class="col-sep">5,409</td>
+            <td>$29.6</td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:41px"></span>69.7%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:17px"></span>28.8%</span></td>
+            <td class="col-sep">60.2%</td>
+            <td class="col-sep">7.3%</td>
+            <td class="col-sep">16.0%</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="footnote">
+      Source: Revenue from CWN Report (Apr 10) &bull; Units, ASP, Country Split, GM % &amp; Ret % from CY26 Sales data (net: delivered in month &minus; returned in month, no status filter) &bull; Expected ($) = MTD &times; (30/10) linear extrapolation &bull; &Delta; computed on Expected vs Target &bull; GM % = (Net Revenue &minus; Net COGS) / Net Revenue &bull; Mktg % = Paid Spend / CWN Revenue &bull; Ret % = Returned units / Delivered units &bull; *Apr = MTD (1&ndash;10 Apr only) &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+  </div>
+
+  <!-- ═══════════════ PAGE 2: MONTH-ON-MONTH TREND ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page2">
+    <div class="section-title"><span class="page-num">2</span> Month-on-Month Trend — Feb / Mar / Apr* 2026</div>
+
+    <div class="table-card">
+      <table>
+        
+        <thead>
+          <tr class="group-row">
+            <th>Brand</th>
+            <th colspan="3">Revenue ($)</th>
+            <th colspan="3">Units</th>
+            <th colspan="3">$ ASP</th>
+            <th colspan="3">GM %</th>
+          </tr>
+          <tr class="month-row">
+            <th></th>
+            <th>Feb</th>
+            <th>Mar</th>
+            <th class="mar-col col-sep">Apr*</th>
+            <th>Feb</th>
+            <th>Mar</th>
+            <th class="mar-col col-sep">Apr*</th>
+            <th>Feb</th>
+            <th>Mar</th>
+            <th class="mar-col col-sep">Apr</th>
+            <th>Feb</th>
+            <th>Mar</th>
+            <th class="mar-col col-sep">Apr</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td>$368,684</td>
+            <td>$451,187</td>
+            <td class="mar-col col-sep declined">$344,966</td>
+            <td>9,949</td>
+            <td>11,322</td>
+            <td class="mar-col col-sep declined">8,952</td>
+            <td>$37.06</td>
+            <td>$39.85</td>
+            <td class="mar-col col-sep declined">$38.54</td>
+            <td>58.8%</td>
+            <td>61.7%</td>
+            <td class="mar-col col-sep improved">62.3%</td>
+          </tr>
+
+          <tr>
+            <td>Penti</td>
+            <td>$22,786</td>
+            <td>$64,663</td>
+            <td class="mar-col col-sep declined">$39,447</td>
+            <td>1,319</td>
+            <td>3,624</td>
+            <td class="mar-col col-sep declined">2,556</td>
+            <td>$17.27</td>
+            <td>$17.84</td>
+            <td class="mar-col col-sep declined">$15.43</td>
+            <td>58.0%</td>
+            <td>58.5%</td>
+            <td class="mar-col col-sep improved">59.8%</td>
+          </tr>
+
+          <tr>
+            <td>Campus</td>
+            <td>$23,222</td>
+            <td>$45,599</td>
+            <td class="mar-col col-sep improved">$63,510</td>
+            <td>1,063</td>
+            <td>2,029</td>
+            <td class="mar-col col-sep improved">2,964</td>
+            <td>$21.85</td>
+            <td>$22.47</td>
+            <td class="mar-col col-sep declined">$21.43</td>
+            <td>61.2%</td>
+            <td>59.0%</td>
+            <td class="mar-col col-sep declined">58.1%</td>
+          </tr>
+
+          <tr>
+            <td>French Connection</td>
+            <td>$25,774</td>
+            <td>$36,252</td>
+            <td class="mar-col col-sep declined">$17,640</td>
+            <td>1,159</td>
+            <td>1,663</td>
+            <td class="mar-col col-sep declined">1,128</td>
+            <td>$22.24</td>
+            <td>$21.80</td>
+            <td class="mar-col col-sep declined">$15.64</td>
+            <td>13.2%</td>
+            <td>33.1%</td>
+            <td class="mar-col col-sep declined">31.1%</td>
+          </tr>
+
+          <tr>
+            <td>Keds</td>
+            <td>$1,647</td>
+            <td>$9,046</td>
+            <td class="mar-col col-sep declined">$6,215</td>
+            <td>33</td>
+            <td>236</td>
+            <td class="mar-col col-sep declined">180</td>
+            <td>$49.90</td>
+            <td>$38.33</td>
+            <td class="mar-col col-sep declined">$34.53</td>
+            <td>64.6%</td>
+            <td>59.7%</td>
+            <td class="mar-col col-sep declined">56.4%</td>
+          </tr>
+
+          <tr>
+            <td>Puma</td>
+            <td>$12,250</td>
+            <td>$4,281</td>
+            <td class="mar-col col-sep declined">$2,866</td>
+            <td>461</td>
+            <td>203</td>
+            <td class="mar-col col-sep declined">165</td>
+            <td>$26.57</td>
+            <td>$21.09</td>
+            <td class="mar-col col-sep declined">$17.37</td>
+            <td>49.1%</td>
+            <td>32.2%</td>
+            <td class="mar-col col-sep declined">31.9%</td>
+          </tr>
+
+          <tr>
+            <td>Vero Moda</td>
+            <td>$100</td>
+            <td>$2,599</td>
+            <td class="mar-col col-sep improved">$6,547</td>
+            <td>1</td>
+            <td>97</td>
+            <td class="mar-col col-sep improved">267</td>
+            <td>$99.86</td>
+            <td>$26.79</td>
+            <td class="mar-col col-sep declined">$24.52</td>
+            <td>83.8%</td>
+            <td>69.2%</td>
+            <td class="mar-col col-sep declined">65.5%</td>
+          </tr>
+
+          <tr>
+            <td>Cardio Bunny</td>
+            <td>$0</td>
+            <td>$455</td>
+            <td class="mar-col col-sep declined">$-154</td>
+            <td>0</td>
+            <td>13</td>
+            <td class="mar-col col-sep improved">15</td>
+            <td>$0.00</td>
+            <td>$35.04</td>
+            <td class="mar-col col-sep declined">$-10.26</td>
+            <td>0.0%</td>
+            <td>75.3%</td>
+            <td class="mar-col col-sep improved">99.8%</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="footnote">*Apr Revenue &amp; Units = Expected (MTD &times; 30/10 extrapolation); ASP &amp; GM% = actual MTD values &bull; Green = improved vs Mar, Red = declined vs Mar &bull; Excludes Nautica</div>
+  </div>
+
+  <!-- ═══════════════ PAGE 3: CHANNEL PERFORMANCE ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page3">
+    <div class="section-title"><span class="page-num">3</span> Channel-Wise Performance — Apr* 2026</div>
+
+    <div class="table-card">
+      <table>
+        
+        <thead>
+          <tr class="group-row">
+            <th rowspan="2" style="vertical-align:bottom;">Channel</th>
+            <th colspan="3">$ Revenue</th>
+            <th colspan="2" style="border-left: 2px solid rgba(255,255,255,0.15);">vs Mar</th>
+            <th colspan="2" style="border-left: 2px solid rgba(255,255,255,0.15);">Apr* Country Mix</th>
+            <th style="border-left: 2px solid rgba(255,255,255,0.15);" rowspan="2">Top 3 Brands (Apr*)</th>
+          </tr>
+          <tr class="month-row">
+            <th>Feb</th>
+            <th>Mar</th>
+            <th class="mar-col">Apr*</th>
+            <th class="col-sep">Δ ($)</th>
+            <th>Δ %</th>
+            <th class="col-sep">% KSA</th>
+            <th>% UAE</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Namshi</td>
+            <td>259,073</td>
+            <td>399,490</td>
+            <td class="mar-col declined">351,003 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-48,487</span></td>
+            <td><span class="pill negative">-12.1%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:43px"></span>72%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:15px"></span>26%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $246.6K<br>Campus $44.0K<br>Penti $31.7K</td>
+          </tr>
+
+          <tr>
+            <td>Noon</td>
+            <td>132,027</td>
+            <td>147,735</td>
+            <td class="mar-col declined">99,156 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-48,580</span></td>
+            <td><span class="pill negative">-32.9%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:33px"></span>55%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:26px"></span>45%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $80.3K<br>Campus $13.9K<br>Penti $3.6K</td>
+          </tr>
+
+          <tr>
+            <td>Trendyol</td>
+            <td>9,219</td>
+            <td>26,179</td>
+            <td class="mar-col declined">19,088 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-7,091</span></td>
+            <td><span class="pill negative">-27.1%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:52px"></span>88%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:7px"></span>12%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $11.9K<br>Penti $3.1K<br>Puma $2.9K</td>
+          </tr>
+
+          <tr>
+            <td>Amazon 1P</td>
+            <td>23,149</td>
+            <td>17,674</td>
+            <td class="mar-col declined">0 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-17,674</span></td>
+            <td><span class="pill negative">-100.0%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:0px"></span>0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;"></td>
+          </tr>
+
+          <tr>
+            <td>Styli</td>
+            <td>6,345</td>
+            <td>12,843</td>
+            <td class="mar-col declined">8,747 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-4,096</span></td>
+            <td><span class="pill negative">-31.9%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:60px"></span>100%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $4.4K<br>Campus $4.3K</td>
+          </tr>
+
+          <tr>
+            <td>6th Street</td>
+            <td>4,219</td>
+            <td>6,090</td>
+            <td class="mar-col declined">0 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-6,090</span></td>
+            <td><span class="pill negative">-100.0%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:0px"></span>0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:0px"></span>0%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;"></td>
+          </tr>
+
+          <tr>
+            <td>CP</td>
+            <td>19,596</td>
+            <td>3,863</td>
+            <td class="mar-col declined">2,877 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-986</span></td>
+            <td><span class="pill negative">-25.5%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:28px"></span>47%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:31px"></span>53%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">USPA $1.7K<br>Penti $1.1K<br>FC $164</td>
+          </tr>
+
+          <tr>
+            <td>Amazon-3P</td>
+            <td>833</td>
+            <td>207</td>
+            <td class="mar-col declined">167 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative">-40</span></td>
+            <td><span class="pill negative">-19.4%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:0px"></span>0%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:60px"></span>100%</span></td>
+            <td class="col-sep" style="font-size:11px;line-height:1.5;white-space:nowrap;">Campus $167</td>
+          </tr>
+
+          <tr class="total-row">
+            <td>Grand Total</td>
+            <td>454,462</td>
+            <td>614,081</td>
+            <td class="mar-col declined">481,037 <span class="arrow down">▼</span></td>
+            <td class="col-sep"><span class="pill negative" style="font-size:12px">-133,044</span></td>
+            <td><span class="pill negative" style="font-size:12px">-21.7%</span></td>
+            <td class="col-sep"><span class="share-bar"><span class="bar bar-ksa" style="width:41px"></span>70%</span></td>
+            <td><span class="share-bar"><span class="bar bar-uae" style="width:17px"></span>29%</span></td>
+            <td class="col-sep"></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="drivers-title">Key Movement Drivers — Mar vs Apr*</div>
+    <div class="drivers-subtitle">Brand-level breakdown for channels with significant month-on-month changes</div>
+
+    <div class="drivers-grid">
+      
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Noon</span>
+          <span class="ch-delta down">−$48,580 (-33%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$49,999</span></div>
+        <div class="driver-row"><span class="brand-name">Campus</span><span class="driver-val up">+$2,471</span></div>
+        <div class="driver-row"><span class="brand-name">FC</span><span class="driver-val down">−$817</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Namshi</span>
+          <span class="ch-delta down">−$48,487 (-12%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$26,806</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val down">−$20,972</span></div>
+        <div class="driver-row"><span class="brand-name">FC</span><span class="driver-val down">−$15,523</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Amazon 1P</span>
+          <span class="ch-delta down">−$17,674 (-100%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$17,674</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Trendyol</span>
+          <span class="ch-delta down">−$7,091 (-27%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$4,213</span></div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val down">−$1,996</span></div>
+        <div class="driver-row"><span class="brand-name">Puma</span><span class="driver-val down">−$1,415</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">6th Street</span>
+          <span class="ch-delta down">−$6,090 (-100%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$3,610</span></div>
+        <div class="driver-row"><span class="brand-name">FC</span><span class="driver-val down">−$2,442</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">Styli</span>
+          <span class="ch-delta down">−$4,096 (-32%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val down">−$4,784</span></div>
+        <div class="driver-row"><span class="brand-name">Campus</span><span class="driver-val up">+$688</span></div>
+      </div>
+
+      <div class="driver-card down">
+        <div class="card-header">
+          <span class="ch-name">CP</span>
+          <span class="ch-delta down">−$986 (-26%)</span>
+        </div>
+        <div class="driver-row"><span class="brand-name">Penti</span><span class="driver-val down">−$1,913</span></div>
+        <div class="driver-row"><span class="brand-name">USPA</span><span class="driver-val up">+$865</span></div>
+      </div>
+
+    </div>
+
+    <div class="footnote">
+      Source: CY26 Sales data (net: delivered in month &minus; returned in month, no status filter) &bull; *Apr = Expected (MTD 1&ndash;10 Apr &times; 30/10) &bull; Green = improved vs Mar, Red = declined vs Mar &bull; Country mix based on Apr expected revenue &bull; Driver cards show brand-level contribution to each channel's MoM change &bull; Excludes Nautica &amp; untagged SKUs
+    </div>
+  </div>
+
+  <!-- ═══════════════ PAGE 4: WOW PERFORMANCE ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page4">
+    <div class="section-title"><span class="page-num">4</span> WoW Daily Average Revenue — Last 8 Weeks (Feb–Apr)</div>
+
+    <div class="wow-card" style="margin-bottom:20px;">
+      <div class="wow-card-title">All Brands — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:12px 8px 4px 8px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$13,021</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:97px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$15,217</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:114px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 17%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$20,793</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:156px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 37%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$22,417</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:168px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 8%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$23,986</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:180px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 7%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$10,514</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:78px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 56%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$20,412</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:153px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 94%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$15,204</div>
+          <div style="width:70%;height:180px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:114px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 26%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-grid">
+      
+    <div class="wow-card">
+      <div class="wow-card-title">U.S. Polo Assn. — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$10,544</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:71px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$11,166</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:75px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 6%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$15,877</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:107px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 42%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$16,706</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:113px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 5%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$17,665</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 6%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$7,066</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:48px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 60%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$14,867</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:100px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 110%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$10,839</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:73px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 27%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Penti — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$732</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:32px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,298</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:58px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 77%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$2,140</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:96px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 65%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$2,667</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:119px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 25%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$2,672</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 0%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,086</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:48px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 59%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,573</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:70px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 45%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,244</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:55px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 21%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Campus — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$667</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:34px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$969</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:50px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 45%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,345</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:70px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 39%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,366</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:71px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 2%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,568</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:81px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 15%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,051</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:54px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 33%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$2,301</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 119%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$2,065</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:107px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 10%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">French Connection — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$663</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:50px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,199</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:91px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 81%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,042</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:79px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 13%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,235</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:94px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 19%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,570</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 27%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$787</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:60px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 50%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$1,072</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:81px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 36%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$438</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:33px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 59%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Keds — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$87</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:30px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$153</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:53px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 77%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$223</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:77px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 46%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$259</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:90px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 16%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$344</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 33%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$208</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:72px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 40%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$315</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:110px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 52%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$234</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:81px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 26%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Puma — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$329</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:94px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$418</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 27%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$166</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:47px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 60%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$160</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:45px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 4%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$78</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:22px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 51%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$131</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:37px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 67%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$102</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:29px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 22%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$123</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:35px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 21%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Vero Moda — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$14</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:6px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 100%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$23</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:10px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$86</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:38px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 275%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$140</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:63px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 63%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$168</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:75px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 20%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$266</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 58%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow-card">
+      <div class="wow-card-title">Cardio Bunny — Daily Avg Sale</div>
+      <div style="display:flex;gap:4px;align-items:flex-start;padding:8px 4px 4px 4px;">
+        
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Feb&nbsp;28–<br>Mar&nbsp;06</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$0</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;07–13</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$3</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:8px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;14–20</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$45</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:120px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;21–27</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#27ae60;margin-top:2px;">&#9650; 1287%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$13</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:35px;background:var(--opptra-navy);opacity:0.75;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Mar&nbsp;28–<br>Apr&nbsp;03</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 70%</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">
+          <div style="font-size:11px;font-weight:600;color:var(--opptra-navy);height:16px;line-height:16px;margin-bottom:4px;">$-4</div>
+          <div style="width:70%;height:120px;display:flex;align-items:flex-end;justify-content:center;">
+            <div style="width:100%;height:2px;background:var(--opptra-orange);opacity:1;border-radius:4px 4px 0 0;transition:height 0.3s;"></div>
+          </div>
+          <div style="font-size:10px;color:var(--opptra-grey);margin-top:6px;text-align:center;line-height:1.2;height:26px;display:flex;align-items:center;justify-content:center;white-space:nowrap;">Apr&nbsp;04–10</div>
+          <div style="height:18px;display:flex;align-items:center;justify-content:center;"><div style="font-size:10px;color:#e74c3c;margin-top:2px;">&#9660; 130%</div></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="footnote">
+      Revenue = Delivered in week &minus; Returned in week (CWN basis, no status filter) &bull; Excludes Nautica &amp; untagged SKUs &bull; Orange bar = most recent week &bull; % change is week-over-week
+    </div>
+  </div>
+
+  <!-- ═══════════════ PAGE 5: PERFORMANCE MARKETING ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page5">
+    <div class="section-title"><span class="page-num">5</span> April Performance Marketing — By Brand & Country</div>
+
+    <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; color: var(--opptra-navy); margin-top: 24px; margin-bottom: 12px;">KSA</h3>
+    <div class="table-card">
+      <table>
+        
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Mktg Spend ($)</th>
+            <th>Views</th>
+            <th>CTR %</th>
+            <th>Conversion %</th>
+            <th>Cost/View</th>
+            <th>ROAS</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Campus</td>
+            <td style="text-align: right;">$1,090.78</td>
+            <td style="text-align: right;">362,734</td>
+            <td style="text-align: right;">1.94%</td>
+            <td style="text-align: right;">2.12%</td>
+            <td style="text-align: right;">$0.0030</td>
+            <td style="text-align: right;">3.84</td>
+          </tr>
+
+          <tr>
+            <td>Keds</td>
+            <td style="text-align: right;">$185.26</td>
+            <td style="text-align: right;">93,020</td>
+            <td style="text-align: right;">1.29%</td>
+            <td style="text-align: right;">0.42%</td>
+            <td style="text-align: right;">$0.0020</td>
+            <td style="text-align: right;">1.51</td>
+          </tr>
+
+          <tr>
+            <td>Penti</td>
+            <td style="text-align: right;">$443.41</td>
+            <td style="text-align: right;">214,273</td>
+            <td style="text-align: right;">1.30%</td>
+            <td style="text-align: right;">1.83%</td>
+            <td style="text-align: right;">$0.0021</td>
+            <td style="text-align: right;">2.58</td>
+          </tr>
+
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td style="text-align: right;">$4,894.39</td>
+            <td style="text-align: right;">2,181,048</td>
+            <td style="text-align: right;">1.22%</td>
+            <td style="text-align: right;">2.20%</td>
+            <td style="text-align: right;">$0.0022</td>
+            <td style="text-align: right;">6.68</td>
+          </tr>
+
+          <tr>
+            <td>Vero Moda</td>
+            <td style="text-align: right;">$220.91</td>
+            <td style="text-align: right;">86,601</td>
+            <td style="text-align: right;">2.13%</td>
+            <td style="text-align: right;">0.05%</td>
+            <td style="text-align: right;">$0.0026</td>
+            <td style="text-align: right;">0.40</td>
+          </tr>
+
+          <tr style="font-weight:700;background:#f0f1f5;border-top:2px solid var(--opptra-navy);">
+            <td>Total KSA</td>
+            <td style="text-align: right;">$6,834.75</td>
+            <td style="text-align: right;">2,937,676</td>
+            <td style="text-align: right;">1.34%</td>
+            <td style="text-align: right;">2.04%</td>
+            <td style="text-align: right;">$0.0023</td>
+            <td style="text-align: right;">5.62</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+
+    <h3 style="font-family: var(--font-heading); font-weight: 600; font-size: 15px; color: var(--opptra-navy); margin-top: 24px; margin-bottom: 12px;">UAE</h3>
+    <div class="table-card">
+      <table>
+        
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Mktg Spend ($)</th>
+            <th>Views</th>
+            <th>CTR %</th>
+            <th>Conversion %</th>
+            <th>Cost/View</th>
+            <th>ROAS</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Campus</td>
+            <td style="text-align: right;">$683.02</td>
+            <td style="text-align: right;">212,113</td>
+            <td style="text-align: right;">1.41%</td>
+            <td style="text-align: right;">1.31%</td>
+            <td style="text-align: right;">$0.0032</td>
+            <td style="text-align: right;">1.52</td>
+          </tr>
+
+          <tr>
+            <td>Keds</td>
+            <td style="text-align: right;">$98.95</td>
+            <td style="text-align: right;">47,690</td>
+            <td style="text-align: right;">1.20%</td>
+            <td style="text-align: right;">1.05%</td>
+            <td style="text-align: right;">$0.0021</td>
+            <td style="text-align: right;">2.94</td>
+          </tr>
+
+          <tr>
+            <td>Penti</td>
+            <td style="text-align: right;">$481.35</td>
+            <td style="text-align: right;">101,734</td>
+            <td style="text-align: right;">1.70%</td>
+            <td style="text-align: right;">7.07%</td>
+            <td style="text-align: right;">$0.0047</td>
+            <td style="text-align: right;">4.27</td>
+          </tr>
+
+          <tr>
+            <td>U.S. Polo Assn.</td>
+            <td style="text-align: right;">$3,103.07</td>
+            <td style="text-align: right;">1,265,897</td>
+            <td style="text-align: right;">1.30%</td>
+            <td style="text-align: right;">2.55%</td>
+            <td style="text-align: right;">$0.0025</td>
+            <td style="text-align: right;">5.84</td>
+          </tr>
+
+          <tr>
+            <td>Vero Moda</td>
+            <td style="text-align: right;">$456.54</td>
+            <td style="text-align: right;">176,728</td>
+            <td style="text-align: right;">1.40%</td>
+            <td style="text-align: right;">1.29%</td>
+            <td style="text-align: right;">$0.0026</td>
+            <td style="text-align: right;">2.83</td>
+          </tr>
+
+          <tr style="font-weight:700;background:#f0f1f5;border-top:2px solid var(--opptra-navy);">
+            <td>Total UAE</td>
+            <td style="text-align: right;">$4,822.93</td>
+            <td style="text-align: right;">1,804,162</td>
+            <td style="text-align: right;">1.34%</td>
+            <td style="text-align: right;">2.50%</td>
+            <td style="text-align: right;">$0.0027</td>
+            <td style="text-align: right;">4.73</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+
+    <div class="footnote">Data as on 10 Apr 2026 | ROAS: Return on Ad Spend | CTR: Click-Through Rate | CVR: Conversion Rate</div>
+  </div>
+
+  <!-- ═══════════════ PAGE 6: INVENTORY ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page6">
+    <div class="section-title"><span class="page-num">6</span> Inventory — Stock, Rate of Sale & Weeks Cover by Brand</div>
+
+    <div class="table-card" style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:900px;">
+        
+        <thead>
+          <tr style="background:var(--opptra-navy);color:var(--opptra-white);">
+            <th rowspan="2" style="text-align:left;padding:10px 14px;font-weight:600;border-right:2px solid rgba(255,255,255,0.15);vertical-align:bottom;">Brand</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">Total GCC (incl. FZ)</th>
+            <th colspan="2" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">Free Zone</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-right:2px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.2);">KSA</th>
+            <th colspan="3" style="text-align:center;padding:8px 10px;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.2);">UAE</th>
+          </tr>
+          <tr style="background:var(--opptra-navy);color:rgba(255,255,255,0.85);">
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;border-right:2px solid rgba(255,255,255,0.15);">WOC</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">Units</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">ROS/wk</th>
+            <th style="text-align:right;padding:6px 10px;font-weight:500;font-size:11px;">WOC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- U.S. Polo Assn. -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">U.S. Polo Assn.</td>
+            <td style="text-align:right;padding:10px 10px;">91,154</td>
+            <td style="text-align:right;padding:10px 10px;">2,285</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">39.9</span></td>
+            <td style="text-align:right;padding:10px 10px;">34,680</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">15.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">30,655</td>
+            <td style="text-align:right;padding:10px 10px;">1,503</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">20.4</span></td>
+            <td style="text-align:right;padding:10px 10px;">25,819</td>
+            <td style="text-align:right;padding:10px 10px;">658</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">39.2</span></td>
+          </tr>
+          <!-- Penti -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Penti</td>
+            <td style="text-align:right;padding:10px 10px;">9,402</td>
+            <td style="text-align:right;padding:10px 10px;">737</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">12.8</span></td>
+            <td style="text-align:right;padding:10px 10px;">121</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">0.2</span></td>
+            <td style="text-align:right;padding:10px 10px;">4,218</td>
+            <td style="text-align:right;padding:10px 10px;">364</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">11.6</span></td>
+            <td style="text-align:right;padding:10px 10px;">5,063</td>
+            <td style="text-align:right;padding:10px 10px;">358</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">14.2</span></td>
+          </tr>
+          <!-- Campus -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Campus</td>
+            <td style="text-align:right;padding:10px 10px;">14,136</td>
+            <td style="text-align:right;padding:10px 10px;">497</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">28.5</span></td>
+            <td style="text-align:right;padding:10px 10px;">506</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">1.0</span></td>
+            <td style="text-align:right;padding:10px 10px;">7,394</td>
+            <td style="text-align:right;padding:10px 10px;">404</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">18.3</span></td>
+            <td style="text-align:right;padding:10px 10px;">6,236</td>
+            <td style="text-align:right;padding:10px 10px;">89</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">70.3</span></td>
+          </tr>
+          <!-- French Connection UK -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">French Connection UK</td>
+            <td style="text-align:right;padding:10px 10px;">19,993</td>
+            <td style="text-align:right;padding:10px 10px;">267</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">74.8</span></td>
+            <td style="text-align:right;padding:10px 10px;">6,110</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">22.9</span></td>
+            <td style="text-align:right;padding:10px 10px;">3,890</td>
+            <td style="text-align:right;padding:10px 10px;">102</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">38.3</span></td>
+            <td style="text-align:right;padding:10px 10px;">9,993</td>
+            <td style="text-align:right;padding:10px 10px;">163</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">61.3</span></td>
+          </tr>
+          <!-- Keds -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Keds</td>
+            <td style="text-align:right;padding:10px 10px;">5,086</td>
+            <td style="text-align:right;padding:10px 10px;">43</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">119</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,348</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">31.6</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,613</td>
+            <td style="text-align:right;padding:10px 10px;">17</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">96.0</span></td>
+            <td style="text-align:right;padding:10px 10px;">2,125</td>
+            <td style="text-align:right;padding:10px 10px;">24</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">86.7</span></td>
+          </tr>
+          <!-- PUMA -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">PUMA</td>
+            <td style="text-align:right;padding:10px 10px;">3,912</td>
+            <td style="text-align:right;padding:10px 10px;">39</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">100</span></td>
+            <td style="text-align:right;padding:10px 10px;">26</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">0.7</span></td>
+            <td style="text-align:right;padding:10px 10px;">3,256</td>
+            <td style="text-align:right;padding:10px 10px;">39</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">83.5</span></td>
+            <td style="text-align:right;padding:10px 10px;">630</td>
+            <td style="text-align:right;padding:10px 10px;">0</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">&mdash;</span></td>
+          </tr>
+          <!-- Vero Moda -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Vero Moda <span style="font-size:10px;color:var(--opptra-orange);font-weight:500;">NEW</span></td>
+            <td style="text-align:right;padding:10px 10px;">4,401</td>
+            <td style="text-align:right;padding:10px 10px;">31</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">142</span></td>
+            <td style="text-align:right;padding:10px 10px;">722</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#fce8e8;color:#c0392b;font-weight:600;">23.3</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,973</td>
+            <td style="text-align:right;padding:10px 10px;">7.9</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">250</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,706</td>
+            <td style="text-align:right;padding:10px 10px;">23</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#fff3e0;color:#e67e22;font-weight:600;">73.9</span></td>
+          </tr>
+          <!-- Cardio Bunny -->
+          <tr style="border-bottom:1px solid #eee;">
+            <td style="padding:10px 14px;font-weight:600;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">Cardio Bunny <span style="font-size:10px;color:var(--opptra-orange);font-weight:500;">NEW</span></td>
+            <td style="text-align:right;padding:10px 10px;">2,677</td>
+            <td style="text-align:right;padding:10px 10px;">4</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">735</span></td>
+            <td style="text-align:right;padding:10px 10px;">1,208</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">332</span></td>
+            <td style="text-align:right;padding:10px 10px;">605</td>
+            <td style="text-align:right;padding:10px 10px;">0.7</td>
+            <td style="text-align:right;padding:10px 10px;border-right:2px solid #f0f1f5;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">864</span></td>
+            <td style="text-align:right;padding:10px 10px;">864</td>
+            <td style="text-align:right;padding:10px 10px;">2.3</td>
+            <td style="text-align:right;padding:10px 10px;"><span style="padding:2px 8px;border-radius:8px;background:#e8e8e8;color:#888;font-weight:600;">376</span></td>
+          </tr>
+          <!-- GRAND TOTAL -->
+          <tr style="border-top:2px solid var(--opptra-navy);background:#f9f9fb;">
+            <td style="padding:10px 14px;font-weight:700;color:var(--opptra-navy);border-right:2px solid #f0f1f5;">TOTAL</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">150,761</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">3,902</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">38.6</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">44,721</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">11.5</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">53,604</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">2,436</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;border-right:2px solid #f0f1f5;">22.0</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">52,436</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">1,318</td>
+            <td style="text-align:right;padding:10px 10px;font-weight:700;">39.8</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <!-- WOC Legend -->
+    <div style="display:flex;gap:16px;margin-top:14px;font-size:11px;color:var(--opptra-grey);">
+      <span>WOC colour guide:</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#fce8e8;margin-right:4px;vertical-align:middle;"></span> &lt; 52 wks</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#fff3e0;margin-right:4px;vertical-align:middle;"></span> 52–100 wks (overstocked)</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#e8e8e8;margin-right:4px;vertical-align:middle;"></span> &gt; 100 wks (dead stock / no sales)</span>
+    </div>
+
+    <div class="footnote" style="margin-top:10px;">
+      Source: OMS (12 Apr 2026) + Noon FBN snapshots &bull; ROS: last 30 days (11 Mar&ndash;10 Apr) for established brands; since first sale for newer brands &bull; Delivered only &bull; WOC = Stock &divide; Weekly ROS &bull; No in-transit adjustment &bull; Excludes Nautica
+    </div>
+  </div>
+
+  <!-- ═══════════════ PAGE 7: LAUNCH CALENDAR ═══════════════ -->
+  <div class="page-divider"><hr></div>
+  <div class="page-section" id="w3-page7">
+    <div class="section-title"><span class="page-num">7</span> Opptra Softlines — Brand Launch Calendar</div>
+
+    
+<div class="table-card">
+      <table class="launch-table">
+        <thead>
+          <tr>
+            <th>Market</th>
+            <th class="live-col">Live</th>
+            <th class="month-col">Apr</th>
+            <th class="month-col">May</th>
+            <th class="month-col">Jun</th>
+            <th class="month-col">Jul</th>
+            <th class="disc-col">Contract Discussion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- GCC -->
+          <tr>
+            <td>GCC<span class="market-count">8 live, 2 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">US Polo</span>
+              <span class="brand-pill live">Penti</span>
+              <span class="brand-pill live">CAMPUS</span>
+              <span class="brand-pill live">Puma</span>
+              <span class="brand-pill live">French Connection</span>
+              <span class="brand-pill live">Vero Moda</span>
+              <span class="brand-pill live">Keds</span>
+              <span class="brand-pill live">Cardio Bunny</span>
+            </td>
+            <td class="cell-month"></td>
+            <td class="cell-month"></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">White Stuff</span></td>
+            <td class="cell-disc"></td>
+          </tr>
+          <!-- India -->
+          <tr>
+            <td>India<span class="market-count">1 live, 3 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">Cardio Bunny</span>
+            </td>
+            <td class="cell-month"><span class="brand-pill upcoming">Jack &amp; Jones</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Lyle &amp; Scott</span></td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"></td>
+            <td class="cell-disc">
+              <span class="brand-pill discussion">Penti</span>
+            </td>
+          </tr>
+          <!-- SEA -->
+          <tr>
+            <td>SEA<span class="market-count">1 live, 3 upcoming</span></td>
+            <td class="cell-live">
+              <span class="brand-pill live">CAMPUS</span>
+            </td>
+            <td class="cell-month"></td>
+            <td class="cell-month">
+              <span class="brand-pill upcoming">Penti</span>
+              <span class="brand-pill upcoming">Keds</span>
+            </td>
+            <td class="cell-month"><span class="brand-pill upcoming">Von Dutch</span></td>
+            <td class="cell-month"></td>
+            <td class="cell-disc">
+              <span class="brand-pill discussion">US Polo</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Brand Manager Strip -->
+    <div class="manager-strip">
+      <div class="manager-group">
+        <span class="manager-name">Sumit:</span>
+        <span class="manager-brands">US Polo, Penti, CAMPUS, Puma</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Sarah:</span>
+        <span class="manager-brands">French Connection, Vero Moda, Von Dutch</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Prachi:</span>
+        <span class="manager-brands">Keds, White Stuff</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Harjeet:</span>
+        <span class="manager-brands">Cardio Bunny, Jack &amp; Jones</span>
+      </div>
+      <span class="manager-dot">|</span>
+      <div class="manager-group">
+        <span class="manager-name">Carine:</span>
+        <span class="manager-brands">Lyle &amp; Scott</span>
+      </div>
+    </div>
+
+    <div class="footnote">Source: Opptra Softlines Launch Calendar &bull; Keds India = TBD (not shown)</div>
+
+  </div>
+
+  <script>
+    {
+      // ── IntersectionObserver for nav highlighting ──
+      const sections = document.querySelectorAll('.page-section');
+      const navLinks = document.querySelectorAll('.page-nav a');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.page-nav a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach(section => observer.observe(section));
+    }
+  </script>
+
+
+  </div>
+
+  <!-- ═══════ WEEK 2: 31 Mar – 06 Apr 2026 ═══════ -->
+  <div class="week-view" id="view-week2">
 <div class="page-nav">
     <a href="#w2-page1" class="active">Mar Revenue vs Target</a>
     <a href="#w2-page1b">Apr Targets</a>
